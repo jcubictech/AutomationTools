@@ -1,0 +1,50 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>PMT admin</title>
+    <style type="text/css">@import url(/pmt_common/css/admin.css);</style>
+    <script type="text/javascript" src="/pmt_common/js/jsfunctions.js"></script>
+</head>
+
+<body><div class="center">
+<p>&nbsp;</p>
+<form method="post" onsubmit="return true;" action="" id="login_form" ><input type='hidden' name='CSRFName' value='CSRFGuard_383794528' /><input type='hidden' name='CSRFToken' value='95ce700ce7ed2dfbc38ad36031999bb9d93c410fe60d94db5eec9d0f0a0c0a609ad92fea70ae5ebecda84247e0226772d94b46454af6d6b44756907380c60041' />
+<table border="1" cellpadding="0" cellspacing="0" class="lcenter" style='border-width: 1px;border-color: black;' ><tr><td>
+	<table cellpadding="2" cellspacing="0" class="lcenter" style="width:320px;">
+		<tr><th align='center' colspan="100%"><h1>PMT admin</h1></th></tr>
+		<tr class="system"><th align='center' colspan="100%">Please enter your login information.</th></tr>
+    <tr>
+      <th align='left'>Area:</th>
+      <th align='left'><select name='adminarea' id='adminarea' size='1'  style='width:200px;' onchange="javascript: document.getElementById('login_form').action='/'+this.value+'/auth_login.html'; "  >
+	<option value='admin'  >Admin Area</option>
+	<option value='frontdesk'  >FrontDesk Area</option>
+	<option value='owner'  >Owner Area</option>
+	<option value='travelagent'  >In-House TA Area</option>
+	<option value='wholesale'  >Wholesale Area</option>
+	<option value='housekeeping'  >Housekeeping Area</option>
+	<option value='pos'  >POS Area</option>
+</select>
+</th>
+    </tr>
+		<tr>
+			<th align='left'>Login:</th>
+			<th align='left'><input type="text"  name="user_login" id='user_login' value="" maxlength="64" style='width:200px' /></th>
+		</tr>
+		<tr>
+			<th align='left'>Password:</th>
+			<th align='left'><input type='password' name="user_password" id="user_password" style='width:200px' value='' /></th>
+		</tr>
+		<tr><th colspan="100%" align="center">
+			<input type='submit' name="submit_login" value='Login' />
+		</th></tr>
+	</table>
+</td></tr></table>
+</form>
+
+<p><a href="http://www.mypropertymanagementsoftware.com/" style="font-weight:bold;color:#3C3C3C;" >VISIT RESORT PRO OFFICIAL WEBSITE</a></p>
+</div>
+<div id='pmt_loginarea_flag' ></div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-Reservations", "SS-AirBnb2Streamline\SS-Reservations.csproj", "{CE19ABF7-DE53-44BB-98C7-37CB14BC8227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenStaySync", "SenStaySync\SenStaySync.csproj", "{C629EBDC-C73C-4040-9F60-0C73A107F339}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-StreamlineScraper", "SS_StreamlineIDscraper\SS-StreamlineScraper.csproj", "{388B33A7-922B-4D3D-8859-9AD64C36DFDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-AirBnbExport", "SS-AirBnbExport\SS-AirBnbExport.csproj", "{7EDA828B-2841-4286-A4DD-FEB5A21615F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-DebugTool", "SSDebugTool\SS-DebugTool.csproj", "{8E2A1CEF-728F-4C3D-8913-4D00357C65DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-SeasonCreater", "SS-SeasonCreater\SS-SeasonCreater.csproj", "{E53598C1-3F1D-446C-ADC0-39B00EC0CB63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-PriceSync", "SS-PriceSync\SS-PriceSync.csproj", "{105B74CD-7443-419A-B435-623776DD9448}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-AirBnbPasswordSync", "SS-AirBnbPasswordSync\SS-AirBnbPasswordSync.csproj", "{97B2C8BC-D5CC-4685-8B28-FB2F525AA286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-PriceParse", "SS-PriceParse\SS-PriceParse.csproj", "{E5DDA33A-104E-4055-BEA2-CA9944402BE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-PriceSyncAirbnb", "SS-PriceSyncAirbnb\SS-PriceSyncAirbnb.csproj", "{455A9A7E-C2F0-4FD7-8390-E67C2200CDEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-AirBnbScraper", "SS-AirBnbScraper\SS-AirBnbScraper.csproj", "{8DDF6C42-2E63-4F24-84D5-9C509E7AB7F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-AirBnbLoginAttemptsNotificator", "SS-AirBnbLoginAttemptsNotificator\SS-AirBnbLoginAttemptsNotificator.csproj", "{2B010C2A-4547-4BF9-B7B6-3895D94915DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-AirBnbPricePush", "SS-AirBnbPricePush\SS-AirBnbPricePush.csproj", "{F53CA22C-7DA1-40C7-B74E-FF4982DF2C6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-PricePushKickOff", "SS-PricePushKickOff\SS-PricePushKickOff.csproj", "{0D08B7E1-FD8D-425E-9834-5C342E80433A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SS-StreamlinePricePush", "SS-StreamlinePricePush\SS-StreamlinePricePush.csproj", "{703BED5B-A8A3-4AA9-8CF2-58C77F343A43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE19ABF7-DE53-44BB-98C7-37CB14BC8227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE19ABF7-DE53-44BB-98C7-37CB14BC8227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE19ABF7-DE53-44BB-98C7-37CB14BC8227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE19ABF7-DE53-44BB-98C7-37CB14BC8227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C629EBDC-C73C-4040-9F60-0C73A107F339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C629EBDC-C73C-4040-9F60-0C73A107F339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C629EBDC-C73C-4040-9F60-0C73A107F339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C629EBDC-C73C-4040-9F60-0C73A107F339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{388B33A7-922B-4D3D-8859-9AD64C36DFDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{388B33A7-922B-4D3D-8859-9AD64C36DFDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{388B33A7-922B-4D3D-8859-9AD64C36DFDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{388B33A7-922B-4D3D-8859-9AD64C36DFDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EDA828B-2841-4286-A4DD-FEB5A21615F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDA828B-2841-4286-A4DD-FEB5A21615F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDA828B-2841-4286-A4DD-FEB5A21615F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDA828B-2841-4286-A4DD-FEB5A21615F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E2A1CEF-728F-4C3D-8913-4D00357C65DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E2A1CEF-728F-4C3D-8913-4D00357C65DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E2A1CEF-728F-4C3D-8913-4D00357C65DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E2A1CEF-728F-4C3D-8913-4D00357C65DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E53598C1-3F1D-446C-ADC0-39B00EC0CB63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E53598C1-3F1D-446C-ADC0-39B00EC0CB63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E53598C1-3F1D-446C-ADC0-39B00EC0CB63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E53598C1-3F1D-446C-ADC0-39B00EC0CB63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{105B74CD-7443-419A-B435-623776DD9448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105B74CD-7443-419A-B435-623776DD9448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105B74CD-7443-419A-B435-623776DD9448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105B74CD-7443-419A-B435-623776DD9448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97B2C8BC-D5CC-4685-8B28-FB2F525AA286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B2C8BC-D5CC-4685-8B28-FB2F525AA286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B2C8BC-D5CC-4685-8B28-FB2F525AA286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B2C8BC-D5CC-4685-8B28-FB2F525AA286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5DDA33A-104E-4055-BEA2-CA9944402BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5DDA33A-104E-4055-BEA2-CA9944402BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5DDA33A-104E-4055-BEA2-CA9944402BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5DDA33A-104E-4055-BEA2-CA9944402BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{455A9A7E-C2F0-4FD7-8390-E67C2200CDEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455A9A7E-C2F0-4FD7-8390-E67C2200CDEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455A9A7E-C2F0-4FD7-8390-E67C2200CDEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455A9A7E-C2F0-4FD7-8390-E67C2200CDEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DDF6C42-2E63-4F24-84D5-9C509E7AB7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDF6C42-2E63-4F24-84D5-9C509E7AB7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDF6C42-2E63-4F24-84D5-9C509E7AB7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDF6C42-2E63-4F24-84D5-9C509E7AB7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B010C2A-4547-4BF9-B7B6-3895D94915DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B010C2A-4547-4BF9-B7B6-3895D94915DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B010C2A-4547-4BF9-B7B6-3895D94915DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B010C2A-4547-4BF9-B7B6-3895D94915DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F53CA22C-7DA1-40C7-B74E-FF4982DF2C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53CA22C-7DA1-40C7-B74E-FF4982DF2C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53CA22C-7DA1-40C7-B74E-FF4982DF2C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53CA22C-7DA1-40C7-B74E-FF4982DF2C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D08B7E1-FD8D-425E-9834-5C342E80433A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D08B7E1-FD8D-425E-9834-5C342E80433A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D08B7E1-FD8D-425E-9834-5C342E80433A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D08B7E1-FD8D-425E-9834-5C342E80433A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{703BED5B-A8A3-4AA9-8CF2-58C77F343A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{703BED5B-A8A3-4AA9-8CF2-58C77F343A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{703BED5B-A8A3-4AA9-8CF2-58C77F343A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{703BED5B-A8A3-4AA9-8CF2-58C77F343A43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

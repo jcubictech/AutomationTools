@@ -1,0 +1,38 @@
+﻿@using System
+@using System.Linq
+
+@model dynamic
+
+Timestamp (UTC): @DateTime.UtcNow.ToString("yyyy-M-d HH:mm tt")
+
+@Model.TotalAccountsProcessed accounts processed
+@Model.ErrorsCount errors
+
+@if (Model.PasswordSyncErrors != null && Enumerable.Any(Model.PasswordSyncErrors))
+{
+    <text>Password synchronization errors:</text>
+
+    foreach (var error in Model.PasswordSyncErrors)
+    {
+        <text> * @error.Date - @error.Description</text>
+    }
+}
+
+@if (Model.ErrorsCount > 0)
+{
+    <text>Login attempts errors:</text>
+
+    foreach (var loginAttempt in Model.LoginAttempts)
+    {
+        <text> * @loginAttempt.Key - errors: @loginAttempt.Value </text>
+    }
+}
+
+@if (Model.ProxyErrors != null && Enumerable.Any(Model.ProxyErrors))
+{
+    <text>Proxies with errors:</text>
+    foreach (var proxyError in Model.ProxyErrors)
+    {
+        <text>@proxyError </text>
+    }
+}

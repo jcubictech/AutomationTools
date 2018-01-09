@@ -1,0 +1,91 @@
+﻿@using System
+@using System.Linq
+@model dynamic
+
+Process Started At (UTC): @Model.ProcessStartedAt
+
+@if (Model.ErrorsCount == 0)
+{
+    <text> The CSV file has been processed successfully and the property prices have been updated.</text>
+}
+else
+{
+    @Model.ErrorsCount  <text>errors</text>
+    @Environment.NewLine
+}
+
+@if (Model.ParsingCSV != null && Enumerable.Any(Model.ParsingCSV))
+{
+    <text>Parsing Price Push CSV Errors:</text>
+    foreach (var error in Model.ParsingCSV)
+    {
+        <text> * @Html.Raw(@error.Message)</text>
+        @Environment.NewLine
+    }
+}
+@if (Model.PropertyDetails != null && Enumerable.Any(Model.PropertyDetails))
+{
+    <text>Parsed Property Details :</text>
+    {
+        foreach (var property in Model.PropertyDetails)
+        {
+            <text> * @property.PropertyName - @property.ListingId - @property.Login </text>
+            @Environment.NewLine
+        }
+    }
+}
+@if (Model.SeasonGroupErrors != null && Enumerable.Any(Model.SeasonGroupErrors))
+{
+    <text>Creating Season Group Errors :</text>
+    {
+        foreach (var seasonGroup in Model.SeasonGroupErrors)
+        {
+            <text> * @Html.Raw(@seasonGroup.Message) </text>
+            @Environment.NewLine
+        }
+    }
+}
+@if (Model.SeasonErrors != null && Enumerable.Any(Model.SeasonErrors))
+{
+    <text>Creating Season Errors :</text>
+    {
+        foreach (var season in Model.SeasonErrors)
+        {
+            <text> * @Html.Raw(@season.Message) </text>
+            @Environment.NewLine
+        }
+    }
+}
+@if (Model.LoginErrors != null && Enumerable.Any(Model.LoginErrors))
+{
+    <text>Login Attempts Errors:</text>
+
+    foreach (var loginAttemptError in Model.LoginErrors)
+    {
+        <text> * @loginAttemptError.Login - @Html.Raw(@loginAttemptError.Message) - @loginAttemptError.ProxyIP  </text>
+        @Environment.NewLine
+    }
+}
+@if (Model.PropertyErrors != null && Enumerable.Any(Model.PropertyErrors))
+{
+    <text>Property Access Errors:</text>
+
+    foreach (var propertyAccessError in Model.PropertyErrors)
+    {
+        <text> * @propertyAccessError.ListingId - @Html.Raw(@propertyAccessError.Message)  - @propertyAccessError.Login </text>
+        @Environment.NewLine
+    }
+}
+@if (Model.PriceUpdationErrors != null && Enumerable.Any(Model.PriceUpdationErrors))
+{
+    <text>Property price updation errors:</text>
+    foreach (var priceUpdationErrors in Model.PriceUpdationErrors)
+    {
+        <text> * @priceUpdationErrors.ListingId - @Html.Raw(@priceUpdationErrors.Message) - @priceUpdationErrors.ListingDate  - @priceUpdationErrors.Login </text>
+        @Environment.NewLine
+    }
+}
+
+
+
+

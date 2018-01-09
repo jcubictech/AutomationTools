@@ -1,0 +1,1306 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PMT admin</title>
+
+<link href="/pmt_common/css/new/admin.css?k=31" rel="stylesheet" type="text/css" />
+<style type="text/css">@import url(/pmt_common/css/tapechart.css);</style>
+<script type="text/javascript" src="/pmt_common/js/jsfunctions.js?k=16"></script>
+<script type="text/javascript" src="/pmt_common/js/blowfish.js"></script>
+<script type="text/javascript" src="/pmt_common/js/pmt_ccdecode.js"></script>
+
+<!-- core CSS -->
+<link rel="stylesheet" type="text/css" href="/pmt_common/yui/assets/skins/sam/skin.css" />
+<link rel="stylesheet" type="text/css" href="/pmt_common/yui/tabview/assets/skins/sam/tabview.css" />
+<link rel="stylesheet" type="text/css" href="/pmt_common/yui/button/assets/skins/sam/button.css" />
+<link rel="stylesheet" type="text/css" href="/pmt_common/yui/container/assets/skins/sam/container.css" />
+<link rel="stylesheet" type="text/css" href="/pmt_common/yui/datatable/assets/skins/sam/datatable.css" />
+
+<!-- Dependency -->
+<script type="text/javascript" src="/pmt_common/yui/yahoo-dom-event/yahoo-dom-event.js" ></script>
+<script type="text/javascript" src="/pmt_common/yui/element/element-min.js"></script>
+
+<script type="text/javascript" src="/pmt_common/yui/animation/animation-min.js"></script>
+<script type="text/javascript" src="/pmt_common/yui/dragdrop/dragdrop-min.js"></script>
+<script type="text/javascript" src="/pmt_common/yui/connection/connection.js?k=2"></script>
+<script type="text/javascript" src="/pmt_common/yui/history/history-min.js"></script>
+
+<script type="text/javascript" src="/pmt_common/yui/tabview/tabview-min.js"></script>
+<script type="text/javascript" src="/pmt_common/yui/container/container-min.js"></script>
+<script type="text/javascript" src="/pmt_common/yui/menu/menu-min.js"></script>
+<script type="text/javascript" src="/pmt_common/yui/button/button-min.js"></script>
+
+<script type="text/javascript" src="/pmt_common/yui/calendar/calendar.js"></script>
+<script type="text/javascript" src="/pmt_common/js/datepicker.js"></script> <!-- YAHOO.widget.Calendar.Simple -->
+<script type="text/javascript" src="/pmt_common/yui/paginator/paginator-min.js"></script>
+<script type="text/javascript" src="/pmt_common/yui/datasource/datasource-min.js"></script>
+<script type="text/javascript" src="/pmt_common/yui/datatable/datatable-min.js"></script>
+<script type="text/javascript" src="/pmt_common/yui/slider/slider.js" ></script>
+<script type="text/javascript" src="/pmt_common/yui/colorpicker/colorpicker.js" ></script>
+<script type="text/javascript" src="/pmt_common/yui/logger/logger-min.js" ></script>
+<script type="text/javascript" src="/pmt_common/yui/uploader/uploader-min.js" ></script>
+<script type="text/javascript" src="/pmt_common/yui/carousel/carousel-min.js"></script>
+
+<script type="text/javascript" src="/pmt_common/js/admin.js?k=19"></script>
+<script type="text/javascript" src="/pmt_common/js/admin_reports.js?k=12"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/main.js?k=13"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/actions.js"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/tapechart.js?k=4"></script>
+
+<script type="text/javascript" src="/pmt_common/js/jquery.js?k=1"></script>
+<script type="text/javascript" src="/pmt_common/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="/pmt_common/js/jquery.fixedtableheader-min.js"></script>
+<script type="text/javascript" src="/pmt_common/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/tapechart_new.js"></script>
+<script type="text/javascript" src="/pmt_common/js/jquery.timePicker.min.js"></script>
+<!--<script type="text/javascript" src="/pmt_common/js/dockmenu/interface.js"></script>!-->
+<script type="text/javascript" src="/pmt_common/js/dockmenu/iutil.js"></script>
+<script type="text/javascript" src="/pmt_common/js/dockmenu/fisheye.js"></script>
+ 
+<script type="text/javascript" src="/pmt_common/js/frontdesk/maintenance.js?k=43"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/reservation_group.js?k=2"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/postownercharge.js?k=2"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/reservation.js?k=20"></script>
+<script type="text/javascript" src="/pmt_common/js_new/frontdesk/quick_book.js?k=28"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/housekeeping.js?k=13"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/servicetask.js"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/review.js"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/bulkemail.js"></script>
+<script type="text/javascript" src="/pmt_common/js/admin_menu.js"></script>
+<script type="text/javascript" src="/pmt_common/js/date.js"></script>
+<script type="text/javascript" src="/pmt_common/js/reservations_calendar.js"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/client_purchase.js"></script>
+
+<link rel="stylesheet" type="text/css" media="all" href="/pmt_common/js/calendar/calendar-blue.css" title="win2k-cold-1" />
+<script type="text/javascript" src="/pmt_common/js/calendar/calendar.js?k=1"></script>
+<script type="text/javascript" src="/pmt_common/js/calendar/lang/calendar-en.js"></script>
+<script type="text/javascript" src="/pmt_common/js/calendar/calendar-setup.js"></script>
+<script type="text/javascript" src="/pmt_common/js/overlib/overlib.js"></script>
+<script type="text/javascript" src="/pmt_common/js/colorpicker.js"></script>
+<script type="text/javascript" src="/pmt_common/js/tickets.js?k=6"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/pos.js?k=19"></script>
+<script type="text/javascript" src="/pmt_common/js/frontdesk/wiki.js"></script>
+
+<script type="text/javascript" src="/pmt_common/ckeditor4.2/ckeditor.js"></script>
+<script type="text/javascript" src="/pmt_common/flowplayer/flowplayer-min.js" ></script>
+
+<link rel="stylesheet" type="text/css" href="/pmt_common/css/jquery-ui.css"/>
+<link rel="stylesheet" type="text/css" href="/pmt_common/js/jquery.tablescroll/jquery.tablescroll.css"/>
+<script type="text/javascript" src="/pmt_common/js/jquery.tablescroll/jquery.tablescroll.js" ></script>
+<link rel="stylesheet" type="text/css" href="/pmt_common/js/DataTables/jquery.dataTables.css"/>
+<script type="text/javascript" src="/pmt_common/js/DataTables/jquery.dataTables.js" ></script>
+<script type="text/javascript" src="/pmt_common/js/jquery.tablednd.js" ></script>
+
+<link href="/pmt_common/css/new/addon.css?k=29" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/pmt_common/js_new/admin_actions.js?k=4"></script>
+
+<script type="text/javascript" src="/pmt_common/js/slimcd.lib.js"></script>
+<script type="text/javascript" src="/pmt_common/js/slimcd.js"></script>
+
+<link href="/pmt_common/mcColorPicker/mcColorPicker.css" rel="stylesheet" type="text/css" /> 
+<script src="/pmt_common/mcColorPicker/mcColorPicker.js" type="text/javascript"></script>
+
+<script src="/pmt_common/js/detect_mobile.js" type="text/javascript"></script>
+
+<link href="/pmt_common/css/stickyheader.css" rel="stylesheet" type="text/css" /> 
+<script src="/pmt_common/js/jquery.stickyheader.js?k=2" type="text/javascript"></script>
+<script src="/pmt_common/js/jquery.ba-throttle-debounce.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+var xajaxRequestUri="xajax_common.html";
+var xajaxDebug=false;
+var xajaxStatusMessages=false;
+var xajaxWaitCursor=true;
+var xajaxDefinedGet=0;
+var xajaxDefinedPost=1;
+var xajaxLoaded=false;
+function xajax_ajax_reservation_update_lodgingtype_locations(){return xajax.call("ajax_reservation_update_lodgingtype_locations", arguments, 1);}
+function xajax_ajax_reservation_update_lodgingtype_condotypes(){return xajax.call("ajax_reservation_update_lodgingtype_condotypes", arguments, 1);}
+function xajax_ajax_reservation_update_condotypes(){return xajax.call("ajax_reservation_update_condotypes", arguments, 1);}
+function xajax_ajax_reservation_update_occupants(){return xajax.call("ajax_reservation_update_occupants", arguments, 1);}
+function xajax_ajax_reservation_update_units(){return xajax.call("ajax_reservation_update_units", arguments, 1);}
+function xajax_ajax_reservation_update_pricing_matrix(){return xajax.call("ajax_reservation_update_pricing_matrix", arguments, 1);}
+function xajax_ajax_reservation_update_unit_check_in_out_time(){return xajax.call("ajax_reservation_update_unit_check_in_out_time", arguments, 1);}
+function xajax_ajax_reservation_update_owner_info(){return xajax.call("ajax_reservation_update_owner_info", arguments, 1);}
+function xajax_ajax_update_lodgingtype_locations(){return xajax.call("ajax_update_lodgingtype_locations", arguments, 1);}
+function xajax_ajax_update_lodgingtype_condotypes(){return xajax.call("ajax_update_lodgingtype_condotypes", arguments, 1);}
+function xajax_ajax_update_locations(){return xajax.call("ajax_update_locations", arguments, 1);}
+function xajax_ajax_update_condotypes(){return xajax.call("ajax_update_condotypes", arguments, 1);}
+function xajax_ajax_update_occupants(){return xajax.call("ajax_update_occupants", arguments, 1);}
+function xajax_ajax_update_states(){return xajax.call("ajax_update_states", arguments, 1);}
+function xajax_ajax_update_units(){return xajax.call("ajax_update_units", arguments, 1);}
+function xajax_ajax_update_pricing_matrix(){return xajax.call("ajax_update_pricing_matrix", arguments, 1);}
+function xajax_ajax_update_location_buildings(){return xajax.call("ajax_update_location_buildings", arguments, 1);}
+function xajax_ajax_update_condo_types_groups(){return xajax.call("ajax_update_condo_types_groups", arguments, 1);}
+function xajax_ajax_update_locations_pricing_groups(){return xajax.call("ajax_update_locations_pricing_groups", arguments, 1);}
+function xajax_ajax_update_locations_units_auto_responder_groups(){return xajax.call("ajax_update_locations_units_auto_responder_groups", arguments, 1);}
+function xajax_ajax_update_hear_about(){return xajax.call("ajax_update_hear_about", arguments, 1);}
+function xajax_ajax_update_location_condotypes(){return xajax.call("ajax_update_location_condotypes", arguments, 1);}
+function xajax_ajax_company_update_location_areas(){return xajax.call("ajax_company_update_location_areas", arguments, 1);}
+function xajax_ajax_company_update_location_resorts(){return xajax.call("ajax_company_update_location_resorts", arguments, 1);}
+function xajax_ajax_company_update_location_neighborhoods(){return xajax.call("ajax_company_update_location_neighborhoods", arguments, 1);}
+function xajax_ajax_company_update_condo_types(){return xajax.call("ajax_company_update_condo_types", arguments, 1);}
+function xajax_ajax_company_update_ledgers(){return xajax.call("ajax_company_update_ledgers", arguments, 1);}
+function xajax_ajax_maintenance_update_units(){return xajax.call("ajax_maintenance_update_units", arguments, 1);}
+function xajax_ajax_maintenance_update_lodgingtype_locations(){return xajax.call("ajax_maintenance_update_lodgingtype_locations", arguments, 1);}
+function xajax_ajax_maintenance_update_lodgingtype_condotypes(){return xajax.call("ajax_maintenance_update_lodgingtype_condotypes", arguments, 1);}
+function xajax_ajax_maintenance_update_unit_info(){return xajax.call("ajax_maintenance_update_unit_info", arguments, 1);}
+function xajax_ajax_maintenance_update_chargetype_info(){return xajax.call("ajax_maintenance_update_chargetype_info", arguments, 1);}
+function xajax_ajax_maintenance_update_subtasks(){return xajax.call("ajax_maintenance_update_subtasks", arguments, 1);}
+function xajax_ajax_maintenance_update_vendors(){return xajax.call("ajax_maintenance_update_vendors", arguments, 1);}
+function xajax_ajax_reports_update_units(){return xajax.call("ajax_reports_update_units", arguments, 1);}
+function xajax_ajax_reports_update_units_for_monthreport(){return xajax.call("ajax_reports_update_units_for_monthreport", arguments, 1);}
+function xajax_ajax_reports_update_condotypes_and_buildings(){return xajax.call("ajax_reports_update_condotypes_and_buildings", arguments, 1);}
+function xajax_ajax_reports_update_units_complex(){return xajax.call("ajax_reports_update_units_complex", arguments, 1);}
+function xajax_ajax_reports_update_owning_complexform(){return xajax.call("ajax_reports_update_owning_complexform", arguments, 1);}
+function xajax_ajax_reports_update_lodgingtype_locations(){return xajax.call("ajax_reports_update_lodgingtype_locations", arguments, 1);}
+function xajax_ajax_reports_update_lodgingtype_condotypes(){return xajax.call("ajax_reports_update_lodgingtype_condotypes", arguments, 1);}
+function xajax_ajax_reports_update_lodgingtype_condotypes2(){return xajax.call("ajax_reports_update_lodgingtype_condotypes2", arguments, 1);}
+function xajax_ajax_reports_update_travel_agents_complex(){return xajax.call("ajax_reports_update_travel_agents_complex", arguments, 1);}
+function xajax_ajax_reports_update_processors_complex(){return xajax.call("ajax_reports_update_processors_complex", arguments, 1);}
+function xajax_ajax_reports_update_vendors_for_make_check_payable_to(){return xajax.call("ajax_reports_update_vendors_for_make_check_payable_to", arguments, 1);}
+function xajax_ajax_update_condotypes_and_buildings(){return xajax.call("ajax_update_condotypes_and_buildings", arguments, 1);}
+function xajax_ajax_update_max_adults(){return xajax.call("ajax_update_max_adults", arguments, 1);}
+function xajax_ajax_availability_calendar(){return xajax.call("ajax_availability_calendar", arguments, 1);}
+function xajax_ajax_postownercharge_update_section(){return xajax.call("ajax_postownercharge_update_section", arguments, 1);}
+function xajax_ajax_postownercharge_recurring_update_section(){return xajax.call("ajax_postownercharge_recurring_update_section", arguments, 1);}
+function xajax_ajax_postownercharge_update_units(){return xajax.call("ajax_postownercharge_update_units", arguments, 1);}
+function xajax_ajax_postownercharge_update_lodgingtype_locations(){return xajax.call("ajax_postownercharge_update_lodgingtype_locations", arguments, 1);}
+function xajax_ajax_postownercharge_update_lodgingtype_condotypes(){return xajax.call("ajax_postownercharge_update_lodgingtype_condotypes", arguments, 1);}
+function xajax_ajax_postownercharge_update_subtasks(){return xajax.call("ajax_postownercharge_update_subtasks", arguments, 1);}
+function xajax_ajax_postownercharge_update_vendors(){return xajax.call("ajax_postownercharge_update_vendors", arguments, 1);}
+function xajax_ajax_postownercharge_update_unit_owning_owners(){return xajax.call("ajax_postownercharge_update_unit_owning_owners", arguments, 1);}
+function xajax_ajax_postownercharge_update_unit_description(){return xajax.call("ajax_postownercharge_update_unit_description", arguments, 1);}
+function xajax_ajax_postownercharge_payment_type_changed(){return xajax.call("ajax_postownercharge_payment_type_changed", arguments, 1);}
+function xajax_ajax_processor_role_update_description(){return xajax.call("ajax_processor_role_update_description", arguments, 1);}
+function xajax_ajax_unit_availability_calendar(){return xajax.call("ajax_unit_availability_calendar", arguments, 1);}
+function xajax_ajax_unit_availability_calendar_new(){return xajax.call("ajax_unit_availability_calendar_new", arguments, 1);}
+function xajax_ajax_reservation_payment_type_changed(){return xajax.call("ajax_reservation_payment_type_changed", arguments, 1);}
+function xajax_ajax_purchase_type_changed(){return xajax.call("ajax_purchase_type_changed", arguments, 1);}
+function xajax_ajax_update_news_subcategories(){return xajax.call("ajax_update_news_subcategories", arguments, 1);}
+function xajax_ajax_lookup_city_state_by_zipcode(){return xajax.call("ajax_lookup_city_state_by_zipcode", arguments, 1);}
+function xajax_ajax_lookup_repeat_guest(){return xajax.call("ajax_lookup_repeat_guest", arguments, 1);}
+function xajax_ajax_update_owning_details(){return xajax.call("ajax_update_owning_details", arguments, 1);}
+function xajax_ajax_transfer_update_travelagent_info(){return xajax.call("ajax_transfer_update_travelagent_info", arguments, 1);}
+function xajax_ajax_transfer_update_payments(){return xajax.call("ajax_transfer_update_payments", arguments, 1);}
+function xajax_ajax_update_locations_units(){return xajax.call("ajax_update_locations_units", arguments, 1);}
+function xajax_ajax_update_lodgingtype_locations_units(){return xajax.call("ajax_update_lodgingtype_locations_units", arguments, 1);}
+function xajax_ajax_update_company_tax_ledgers(){return xajax.call("ajax_update_company_tax_ledgers", arguments, 1);}
+function xajax_ajax_update_company_addon_ledgers(){return xajax.call("ajax_update_company_addon_ledgers", arguments, 1);}
+function xajax_ajax_update_company_tax_margin_ledger(){return xajax.call("ajax_update_company_tax_margin_ledger", arguments, 1);}
+function xajax_ajax_update_email_system_template(){return xajax.call("ajax_update_email_system_template", arguments, 1);}
+function xajax_ajax_update_email_quote_template(){return xajax.call("ajax_update_email_quote_template", arguments, 1);}
+function xajax_ajax_update_new_lead_template(){return xajax.call("ajax_update_new_lead_template", arguments, 1);}
+function xajax_ajax_add_email_system_template(){return xajax.call("ajax_add_email_system_template", arguments, 1);}
+function xajax_ajax_add_email_system_signature(){return xajax.call("ajax_add_email_system_signature", arguments, 1);}
+function xajax_ajax_get_unit_available_for_lead(){return xajax.call("ajax_get_unit_available_for_lead", arguments, 1);}
+function xajax_ajax_email_system_update_folders(){return xajax.call("ajax_email_system_update_folders", arguments, 1);}
+function xajax_ajax_email_quote_update_discount_price(){return xajax.call("ajax_email_quote_update_discount_price", arguments, 1);}
+function xajax_ajax_test_global_email_system_settings(){return xajax.call("ajax_test_global_email_system_settings", arguments, 1);}
+function xajax_ajax_test_outgoing_email_system_settings(){return xajax.call("ajax_test_outgoing_email_system_settings", arguments, 1);}
+function xajax_ajax_update_hear_about_lead_units(){return xajax.call("ajax_update_hear_about_lead_units", arguments, 1);}
+function xajax_ajax_update_additional_guests(){return xajax.call("ajax_update_additional_guests", arguments, 1);}
+function xajax_ajax_update_lodgingtype_locations_copy_location(){return xajax.call("ajax_update_lodgingtype_locations_copy_location", arguments, 1);}
+function xajax_ajax_update_location_units_copy(){return xajax.call("ajax_update_location_units_copy", arguments, 1);}
+function xajax_ajax_update_survey_form(){return xajax.call("ajax_update_survey_form", arguments, 1);}
+function xajax_ajax_update_pos_products_for_supplier(){return xajax.call("ajax_update_pos_products_for_supplier", arguments, 1);}
+function xajax_ajax_update_pos_products_for_lookup(){return xajax.call("ajax_update_pos_products_for_lookup", arguments, 1);}
+function xajax_ajax_update_pos_product_price_for_purchase(){return xajax.call("ajax_update_pos_product_price_for_purchase", arguments, 1);}
+function xajax_ajax_update_pos_product_price_for_return(){return xajax.call("ajax_update_pos_product_price_for_return", arguments, 1);}
+function xajax_ajax_update_pos_units(){return xajax.call("ajax_update_pos_units", arguments, 1);}
+function xajax_ajax_update_pos_lodgingtype_locations(){return xajax.call("ajax_update_pos_lodgingtype_locations", arguments, 1);}
+function xajax_ajax_update_pos_lodgingtype_condotypes(){return xajax.call("ajax_update_pos_lodgingtype_condotypes", arguments, 1);}
+function xajax_ajax_update_pos_unit_info(){return xajax.call("ajax_update_pos_unit_info", arguments, 1);}
+function xajax_ajax_update_pos_chargetype_info(){return xajax.call("ajax_update_pos_chargetype_info", arguments, 1);}
+function xajax_ajax_pos_client_search(){return xajax.call("ajax_pos_client_search", arguments, 1);}
+function xajax_ajax_get_reservation_payments_for_template(){return xajax.call("ajax_get_reservation_payments_for_template", arguments, 1);}
+function xajax_ajax_twitter_request_token(){return xajax.call("ajax_twitter_request_token", arguments, 1);}
+function xajax_ajax_twitter_test_token(){return xajax.call("ajax_twitter_test_token", arguments, 1);}
+function xajax_ajax_facebook_request_token(){return xajax.call("ajax_facebook_request_token", arguments, 1);}
+function xajax_ajax_facebook_process(){return xajax.call("ajax_facebook_process", arguments, 1);}
+function xajax_ajax_googlep_request_token(){return xajax.call("ajax_googlep_request_token", arguments, 1);}
+function xajax_ajax_googlep_test_token(){return xajax.call("ajax_googlep_test_token", arguments, 1);}
+function xajax_ajax_wiki_menu_item_panel(){return xajax.call("ajax_wiki_menu_item_panel", arguments, 1);}
+function xajax_ajax_wiki_search(){return xajax.call("ajax_wiki_search", arguments, 1);}
+function xajax_ajax_wiki_answer_status(){return xajax.call("ajax_wiki_answer_status", arguments, 1);}
+function xajax_ajax_wiki_menu_item_move(){return xajax.call("ajax_wiki_menu_item_move", arguments, 1);}
+function xajax_ajax_wiki_menu_item_answers(){return xajax.call("ajax_wiki_menu_item_answers", arguments, 1);}
+function xajax_ajax_update_system_emails(){return xajax.call("ajax_update_system_emails", arguments, 1);}
+function xajax_ajax_select_impact_fee(){return xajax.call("ajax_select_impact_fee", arguments, 1);}
+function xajax_ajax_system_bulletins_update_numbers(){return xajax.call("ajax_system_bulletins_update_numbers", arguments, 1);}
+function xajax_ajax_housekeeping_change_unit_status(){return xajax.call("ajax_housekeeping_change_unit_status", arguments, 1);}
+function xajax_ajax_housekeeping_schedule_inspector_change(){return xajax.call("ajax_housekeeping_schedule_inspector_change", arguments, 1);}
+function xajax_ajax_gallery_locally_images_settings(){return xajax.call("ajax_gallery_locally_images_settings", arguments, 1);}
+function xajax_ajax_system_bulletins_homepage_auto_expand(){return xajax.call("ajax_system_bulletins_homepage_auto_expand", arguments, 1);}
+function xajax_ajax_update_reservation_travel_agent_select_by_code(){return xajax.call("ajax_update_reservation_travel_agent_select_by_code", arguments, 1);}
+function xajax_ajax_ifbyphone_numbers_update(){return xajax.call("ajax_ifbyphone_numbers_update", arguments, 1);}
+function xajax_ajax_ifbyphone_numbers_delete(){return xajax.call("ajax_ifbyphone_numbers_delete", arguments, 1);}
+function xajax_ajax_ifbyphone_agent_login(){return xajax.call("ajax_ifbyphone_agent_login", arguments, 1);}
+function xajax_ajax_ifbyphone_update_admin_icons(){return xajax.call("ajax_ifbyphone_update_admin_icons", arguments, 1);}
+function xajax_ajax_ifbyphone_click_to_agent(){return xajax.call("ajax_ifbyphone_click_to_agent", arguments, 1);}
+	</script>
+	<script type="text/javascript" src="/pmt_common/js/xajax_js/xajax.js?k=1"></script>
+	<script type="text/javascript">
+window.setTimeout(function () { if (!xajaxLoaded) { alert('Error: the xajax Javascript file could not be included. Perhaps the URL is incorrect?\nURL: /pmt_common/js/xajax_js/xajax.js?k=1'); } }, 6000);
+	</script>
+
+
+<script type="text/javascript">
+  var admin_area_area = true;
+	YAHOO.namespace("frontdesk");
+
+  var low_limit_datea=new Date(2015, 8 , 30, 0, 0, 0);
+  var low_limit_dateb=new Date(2015, 8 , 30+2, 0, 0, 0);
+
+	
+  YAHOO.frontdesk.UpdateContent=function (target_url, new_params, history) {
+    if (new_params===null || typeof(new_params) === 'undefined' ) { new_params=''; }
+    new_params=new_params.replace(/lh=[^&]*/,'');
+    new_params=new_params.replace(/CSRFName[^&]*/i,'');
+    new_params=new_params.replace(/CSRFToken[^&]*/i,'');
+    var callback = {
+      success: function(o) { 
+        if (  o.responseText.indexOf('pmt_loginarea_flag') != -1 ) {
+          window.location='auth_login.html';
+          return true;
+        } else {
+          //need to work with path 
+					var object=YAHOO.frontdesk.CachedPages[target_url];
+					if (object !== null && typeof(object) !== 'undefined' ) {
+						object.HTML = o.responseText; object.updated=(new Date()).getTime();
+						YAHOO.frontdesk.CachedPages[target_url]=object;
+					}
+          YAHOO.frontdesk.content.innerHTML=o.responseText; window.scroll(0,0); //onPageLoad(o);
+          var breadcrumb_tag=document.getElementById('page_title_bar_title');
+          if ( breadcrumb_tag !== null && typeof(breadcrumb_tag) !== 'undefined') {
+            var path_tag=document.getElementById('path');
+            if ( path_tag !== null && typeof(path_tag) !== 'undefined') {
+              breadcrumb_tag.innerHTML = path_tag.innerHTML;
+              path_tag.parentElement.removeChild(path_tag);
+            }
+          }
+          if ( o.responseText.indexOf('<yuiscript>') !== -1 ) {
+            var text=o.responseText.replace(/(\r\n|\n|\r)/gm,"");
+            var regex = /<yuiscript>(.+?)<\/yuiscript>/gi;
+            var arr;
+            while ((arr = regex.exec(text)) !== null) {
+              var snode = document.createElement("script");
+              snode.innerHTML = arr[1];
+              document.body.appendChild(snode);
+            }
+          }
+        }
+      },
+      failure: function(o) { YAHOO.frontdesk.content.innerHTML='<p>Sorry, server is not accessible!</p>'; window.scroll(0,0); },
+      abort: function(o) { YAHOO.frontdesk.content.innerHTML='<p>TIMEOUT: Sorry, server is not accessible!</p>'; window.scroll(0,0); },
+      timeout: 256000
+    }
+
+    if (typeof(history) !== "undefined" && history===true ) {
+      YAHOO.util.Connect.asyncRequest('POST', target_url, callback);
+      YAHOO.frontdesk.content.innerHTML=YAHOO.frontdesk.LoadingHTML;
+      if (activeButton !== null) { resetButton(activeButton); activeButton = null; }
+    }  else {
+      if ( typeof(target_url) !== "undefined" && target_url !== '' && target_url !== YAHOO.frontdesk.url ) { YAHOO.frontdesk.url=target_url; }
+      if (typeof(new_params) !== "undefined") { YAHOO.frontdesk.params=new_params; }
+
+      var currentState = YAHOO.util.History.getCurrentState("main_url");
+      var newState=YAHOO.frontdesk.url;
+      if (YAHOO.frontdesk.params !== '') {
+        newState+='?' + YAHOO.frontdesk.params;
+      }
+      if (currentState !== newState ) {
+        YAHOO.util.History.navigate("main_url", newState);
+      } else {
+         YAHOO.frontdesk.UpdateContent(newState, '', true);
+      }
+    }
+    nd();
+  }
+
+  YAHOO.frontdesk.table_navigation_callback = {
+    success: function(o) {
+      YAHOO.frontdesk.content.innerHTML=o.responseText; window.scroll(0,0);
+      if ( o.responseText.indexOf('<yuiscript>') !== -1 ) {
+        var text=o.responseText.replace(/(\r\n|\n|\r)/gm,"");
+        var regex = /<yuiscript>(.+?)<\/yuiscript>/gi;
+        var arr;
+        while ((arr = regex.exec(text)) !== null) {
+          var snode = document.createElement("script");
+          snode.innerHTML = arr[1];
+          document.body.appendChild(snode);
+        }
+      }
+    },
+    upload: function(o)  {
+      if (YAHOO.env.ua.ie > 0 || true ) {
+        setTimeout( function(){ YAHOO.frontdesk.content.innerHTML=o.responseText; window.scroll(0,0); }, 200);
+      } else {
+        YAHOO.frontdesk.content.innerHTML=o.responseText; window.scroll(0,0);
+      }
+    },
+    failure: function(o) { YAHOO.frontdesk.content.innerHTML='<p>We apologize, server is not accessible.  Please contact your administrator.</p>'; window.scroll(0,0); },
+   	abort: function(o) { YAHOO.frontdesk.content.innerHTML='<p>TIMEOUT: We apologize, server is not accessible.  Please contact your administrator.</p>'; window.scroll(0,0); },
+   	timeout: 256000
+  }
+
+  YAHOO.frontdesk.table_navigation_function = function (a_form_div, file_upload) {
+	  //some issues with js
+	  if (document.getElementById('fixedtableheader0')) { $('#fixedtableheader0').remove(); }
+	  nd();
+	  //now begin
+	  var flag=true;
+    var form_div=a_form_div;
+    if ( form_div == null || typeof(form_div) == 'undefined' ) {
+      form_div='table_navigation_form';
+    }
+    var formObject = document.getElementById(form_div);
+   	if (formObject  != null && typeof(formObject) != 'undefined' ) {
+      if (file_upload != null && typeof(file_upload) != 'undefined' && file_upload == true ) {
+    	  if (YAHOO.env.ua.ie > 0 ) {
+          YAHOO.util.Connect.setForm(formObject, true, true);
+        } else {
+          YAHOO.util.Connect.setForm(formObject, true);
+        }
+      } else {
+        if (form_div =='table_navigation_form' &&
+          (formObject.nohistory_update == null || formObject.nohistory_update.value=='0'  )) {
+          YAHOO.frontdesk.UpdateContent(YAHOO.frontdesk.url, YAHOO.util.Connect.setForm(formObject) );
+          flag=false;
+        } else {
+          YAHOO.util.Connect.setForm(formObject);
+        }
+      }
+    }
+
+    if (flag) {
+      YAHOO.util.Connect.asyncRequest('POST', YAHOO.frontdesk.url+'?lh='+YAHOO.frontdesk.lh, YAHOO.frontdesk.table_navigation_callback);
+      if (file_upload != null && typeof(file_upload) != 'undefined' && file_upload == true ) {
+    	  if (YAHOO.env.ua.ie > 0 || true ) {
+    		  setTimeout( function(){ YAHOO.frontdesk.content.innerHTML=YAHOO.frontdesk.LoadingHTML; }, 150);
+    	  } else {
+			  YAHOO.frontdesk.content.innerHTML=YAHOO.frontdesk.LoadingHTML;
+    	  }
+      } else {
+    	  YAHOO.frontdesk.content.innerHTML=YAHOO.frontdesk.LoadingHTML;
+      }
+    }
+  }
+
+
+  function main_init() {
+			$('#dock').Fisheye( {
+				maxWidth: 63,
+				items: 'a',
+				itemsText: 'span',
+				container: '.dock-container',
+				itemWidth: 63,
+				proximity: 0,
+				alignment : 'right',
+				valign: 'bottom',
+				halign : 'right'
+			});
+	
+     
+    YAHOO.frontdesk.auto_logout=true;
+    YAHOO.frontdesk.url='';
+    YAHOO.frontdesk.params='';
+    YAHOO.frontdesk.lh='3be4b7769775a6dbe8183d5d3927d58e';
+    YAHOO.frontdesk.company_id='493';
+        YAHOO.frontdesk.topcontent=document.getElementById('top_admin_content');
+    YAHOO.frontdesk.menucontent=document.getElementById('menu_content');
+    YAHOO.frontdesk.content=document.getElementById('frontdesk_content');
+    YAHOO.frontdesk.ServiceDiv=document.getElementById('service_id');
+    YAHOO.frontdesk.LoadingHTML="<br/><br/><br/><br/><img src='/pmt_common/images/bigrotation.gif' /><br/><br/><br/><br/>";
+    YAHOO.frontdesk.SimpleLoadingHTML="&nbsp;&nbsp;<img src='/pmt_common/images/horizontal_loading.gif' height='10px;' width='101px' />&nbsp;&nbsp;";
+    YAHOO.frontdesk.ErrorHTML="<p>Sorry, server is not accessible!</p>";
+		YAHOO.frontdesk.CachedPages={};
+    //key listeners
+    var main_handler=function (type, args, obj) {
+      switch (args[0]) {
+        case 113: YAHOO.frontdesk.UpdateContent('ds_reservation_new.html', ''); break;
+        case 115: YAHOO.frontdesk.UpdateContent('ds_reservation_find.html', ''); break;
+              }
+    }
+
+    var main_kl = new YAHOO.util.KeyListener(document, { keys:[113, 115] }, { fn:main_handler, scope:document, correctScope:true } ); main_kl.enable();
+    //history manager
+    YAHOO.frontdesk.bookmarked=YAHOO.util.History.getBookmarkedState("main_url");
+    YAHOO.frontdesk.initial=YAHOO.frontdesk.bookmarked || 'general_reservations_last.html';
+
+    YAHOO.util.History.register("main_url", YAHOO.frontdesk.initial, function (state) {
+      var reg=/^(.*\.html)\?*/i;
+      var result = reg.exec(state);
+      YAHOO.frontdesk.url=result[1];
+      var reg=/\?(.*)$/i;
+      var result = reg.exec(state);
+      if ( result != null ) {
+        YAHOO.frontdesk.params=result[1].replace(/pmtmessage=([^\&]+)/i, "");
+      } else {
+        YAHOO.frontdesk.params='';
+      }
+      YAHOO.frontdesk.UpdateContent(state, '', true);
+    });
+
+    try {
+      YAHOO.util.History.initialize("yui-history-field", "yui-history-iframe");
+    } catch(e) {
+      YAHOO.frontdesk.UpdateContent(YAHOO.frontdesk.initial);
+    }
+
+
+		window.setInterval(function() {
+      for (var url in YAHOO.frontdesk.CachedPages ) {
+				var object=YAHOO.frontdesk.CachedPages[url];
+				if (object.updated !== null && object.updated < (new Date()).getTime()- 600*1000 ) {
+					var local_callback = {
+						argument : url,
+						success: function(o) { 
+							YAHOO.frontdesk.CachedPages[o.argument]={HTML :o.responseText, updated: (new Date()).getTime() };
+						},
+						timeout: 16000
+					}
+					YAHOO.util.Connect.asyncRequest('POST', url+'&not_action=1&lh='+YAHOO.frontdesk.lh, local_callback);
+				}
+			}
+    }, 60000);
+
+  }
+
+  YAHOO.frontdesk.UpdateContentCached =function (target_url, new_params, history) {
+		if ( new_params===null || typeof(new_params) ==='undefined' || new_params=='' ) { new_params='noparams=true'; }
+	  var object=YAHOO.frontdesk.CachedPages[target_url+'?'+new_params];
+	  if ( object !== null && typeof(object) !== 'undefined' && object.HTML !== '' 
+			&& object.updated !== null && object.updated > (new Date()).getTime() - 900*1000 ) {
+					YAHOO.frontdesk.content.innerHTML = object.HTML; window.scroll(0,0);
+          var breadcrumb_tag=document.getElementById('page_title_bar_title');
+          if ( breadcrumb_tag != null && typeof(breadcrumb_tag) != 'undefined') {
+            var path_tag=document.getElementById('path');
+            if ( path_tag != null && typeof(path_tag) != 'undefined') {
+              breadcrumb_tag.innerHTML = path_tag.innerHTML;
+              path_tag.parentElement.removeChild(path_tag);
+            }
+          }
+		} else {	
+			YAHOO.frontdesk.CachedPages[target_url+'?'+new_params] = {HTML :'' };
+			YAHOO.frontdesk.UpdateContent(target_url, new_params, history);
+		}
+	}
+
+  function main_close() {
+  	if ( false && YAHOO.frontdesk.auto_logout ) {
+      if (YAHOO.env.ua.ie == 0) {
+        YAHOO.util.Connect.asyncRequest('GET', 'auth_login.html?logout=1&lh='+YAHOO.frontdesk.lh, {} );
+      }
+    	alert(" You have been logged out.\n Thank you for using the system.");
+    } else {
+    	YAHOO.frontdesk.auto_logout=true;
+    }
+    return true;
+  }
+
+  function main_resize() {
+		YAHOO.log("YAHOO.frontdesk.url:"+YAHOO.frontdesk.url, "debug info", "resize");
+		if (YAHOO.frontdesk.url === 'ds_tapechart_new.html') {
+			Tapechart_Initialize(1, YAHOO.frontdesk.tapechart_columns, YAHOO.frontdesk.tapechart_rows);
+		}
+	}
+
+  YAHOO.util.Event.addListener(window, "load", main_init);
+  YAHOO.util.Event.addListener(window, "unload", main_close);
+	YAHOO.util.Event.addListener(window, "resize", main_resize);
+</script>
+
+</head>
+
+
+
+<body class="yui-skin-sam">
+<style type="text/css">
+#intuitPlatformAppMenu {
+	position: relative !important;
+	padding-right: 0px !important;
+	margin-right: 0px !important;
+  right: 0;
+}
+
+#right_top .yui-button {
+  margin: auto .05em;
+}
+/* units data table wholesales styles */
+.yui-skin-sam .yui-dt tr.renting_whlsl_a_color,
+.yui-skin-sam .yui-dt tr.renting_whlsl_a_color td.yui-dt-asc,
+.yui-skin-sam .yui-dt tr.renting_whlsl_a_color td.yui-dt-desc,
+.yui-skin-sam .yui-dt tr.renting_whlsl_a_color td.yui-dt-asc,
+.yui-skin-sam .yui-dt tr.renting_whlsl_a_color td.yui-dt-desc {
+   background-color: #C8E4BE;
+}
+.yui-skin-sam .yui-dt tr.renting_whlsl_b_color,
+.yui-skin-sam .yui-dt tr.renting_whlsl_b_color td.yui-dt-asc,
+.yui-skin-sam .yui-dt tr.renting_whlsl_b_color td.yui-dt-desc,
+.yui-skin-sam .yui-dt tr.renting_whlsl_b_color td.yui-dt-asc,
+.yui-skin-sam .yui-dt tr.renting_whlsl_b_color td.yui-dt-desc {
+   background-color: #EED8C1;
+}
+.yui-skin-sam .yui-dt tr.renting_abode_color,
+.yui-skin-sam .yui-dt tr.renting_abode_color td.yui-dt-asc,
+.yui-skin-sam .yui-dt tr.renting_abode_color td.yui-dt-desc,
+.yui-skin-sam .yui-dt tr.renting_abode_color td.yui-dt-asc,
+.yui-skin-sam .yui-dt tr.renting_abode_color td.yui-dt-desc {
+   background-color: #EDF5FC;
+}
+.yui-skin-sam .yui-dt tr.renting_silver_peak_color,
+.yui-skin-sam .yui-dt tr.renting_silver_peak_color td.yui-dt-asc,
+.yui-skin-sam .yui-dt tr.renting_silver_peak_color td.yui-dt-desc,
+.yui-skin-sam .yui-dt tr.renting_silver_peak_color td.yui-dt-asc,
+.yui-skin-sam .yui-dt tr.renting_silver_peak_color td.yui-dt-desc {
+   background-color: #FCF9ED;
+}
+.yui-skin-sam .yui-dt tr.renting_lespri_color,
+.yui-skin-sam .yui-dt tr.renting_lespri_color td.yui-dt-asc,
+.yui-skin-sam .yui-dt tr.renting_lespri_color td.yui-dt-desc,
+.yui-skin-sam .yui-dt tr.renting_lespri_color td.yui-dt-asc,
+.yui-skin-sam .yui-dt tr.renting_lespri_color td.yui-dt-desc {
+   background-color: #F4EDFC;
+}
+.yui-carousel-element li {
+  width: 180px;
+  height: 200px;
+}
+
+</style>
+
+<iframe id="yui-history-iframe" src="javascript:false;" style="position:absolute;top:0;left:0;width:1px;height:1px;visibility:hidden;" ></iframe>
+<input id="yui-history-field" type="hidden" />
+
+
+
+
+<div class="homepage" id="page_shadows_container"> <span class="rightShadow">
+  <div id="navigation_container">
+    <div id="navigation_design">
+        <div id="navigation_logo" ></div>
+          <div id="navigation_title"></div>
+      <div id="menu">
+          <!--This mark is added to change the text on the dock items, to highlight them any color with any text -->
+          <style> 
+            mark{
+                background-color: #2378a0;
+                color: white;
+                } 
+          </style>
+          <!-- The mark tag from above is then added around each text that will show up on each button. This allows an easy way to change the text color and background for the highlighted effect -->
+<div class="dock" id="dock">
+  <div class="dock-container" id="dock-container">
+      <a class="dock-item" href="javascript:YAHOO.frontdesk.UpdateContentCached('menu_index.html', '');" ><img src="/pmt_common/images/new/topmenu/home5.png" alt="home" /><span><mark>Home</mark></span></a>
+          <a class="dock-item" href="javascript:YAHOO.frontdesk.UpdateContentCached('menu_reservations.html', 'dedicated=1');" ><img src="/pmt_common/images/new/topmenu/reservations5.png" alt="reservations" /><span><mark>Reservations</mark></span></a>
+          <a class="dock-item" href="javascript:YAHOO.frontdesk.UpdateContentCached('menu_housekeeping.html', 'dedicated=1');" ><img src="/pmt_common/images/new/topmenu/housekeeping5.png" alt="housekeeping" /><span><mark>Housekeeping</mark></span></a>
+          <a class="dock-item" href="javascript:YAHOO.frontdesk.UpdateContentCached('menu_accounting.html', 'dedicated=1');" ><img src="/pmt_common/images/new/topmenu/accounting5.png" alt="reports" /><span><mark>Accounting</mark></span></a>
+          <a class="dock-item" href="javascript:YAHOO.frontdesk.UpdateContentCached('menu_reports.html', 'dedicated=1');" ><img src="/pmt_common/images/new/topmenu/reports5.png" alt="reports" /><span><mark>Reports</mark></span></a>
+          <a class="dock-item" href="javascript:YAHOO.frontdesk.UpdateContentCached('menu_maintenance.html', 'dedicated=1');" ><img src="/pmt_common/images/new/topmenu/maintenance5.png" alt="maintenance" /><span><mark>Maintenance</mark></span></a>
+          <a class="dock-item" href="javascript:YAHOO.frontdesk.UpdateContentCached('menu_guest.html', 'dedicated=1');" ><img src="/pmt_common/images/new/topmenu/guest_management5.png" alt="guest management" /><span><mark>Guest Management</mark></span></a>
+          <a class="dock-item" href="javascript:YAHOO.frontdesk.UpdateContentCached('menu_owner.html', 'dedicated=1');" ><img src="/pmt_common/images/new/topmenu/owner_management5.png" alt="Owner Tools" /><span><mark>Owner Tools</mark></span></a>
+          <a class="dock-item" href="javascript:YAHOO.frontdesk.UpdateContentCached('menu_tools.html', 'dedicated=1');" ><img src="/pmt_common/images/new/topmenu/toolbox5.png" alt="Toolbox" /><span><mark>Toolbox</mark></span></a>
+          <a class="dock-item" href="javascript:YAHOO.frontdesk.UpdateContentCached('menu_configuration.html', 'dedicated=1');" ><img src="/pmt_common/images/new/topmenu/configuration5.png" alt="setup &amp; configuration" /><span><mark>Configuration</mark></span></a>
+  </div>
+</div>  
+      </div>
+    </div>
+
+  <!-- div id="navigation_page_buttons">
+      <a href="javascript:YAHOO.frontdesk.UpdateContent('general_distribution_channel.html', '');"><img src="/pmt_common/images/new/btn_distribution.png" border="" alt="" width="177" height="20" /></a>&nbsp;
+      <a href="javascript:YAHOO.frontdesk.UpdateContent('general_yield_management_register.html', '');"><img src="/pmt_common/images/new/yield_management.png" border="" alt="" width="177" height="20" /></a>&nbsp;
+      <a href="javascript:YAHOO.frontdesk.UpdateContent('general_behome247_register.html', '');"><img src="/pmt_common/images/new/behome24.png" border="" alt="" width="177" height="20" /></a>&nbsp;
+      <a href="javascript:YAHOO.frontdesk.UpdateContent('general_blog.html', '');"><img src="/pmt_common/images/new/btn_blog.png" border="" alt="" width="55" height="20" /></a>
+  </div -->
+
+  </div>
+
+
+  <div id="container">
+    <div id="sidebar_left"><img src="/pmt_common/images/new/sidebar_quick_links.gif"/>
+      <div id="quick_links">
+        <ul>
+          <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_reservation_find.html', '');" ><img src="/pmt_common/images/new/60/find_reservation.png" alt="Find Reservation" width="60" height="60" border="0" /></a></li>
+					          <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'lead_status_id=1');" ><img src="/pmt_common/images/new/60/lead_management.png" alt="Lead Management" width="60" height="60" border="0" /></a></li>
+					          <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_reservation_new.html', '');" ><img src="/pmt_common/images/new/60/quick_book.png" alt="quick book" width="60" height="60" border="0" /></a></li>
+          <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_reservation_new_informative_book.html', '');" ><img src="/pmt_common/images/new/60/informative_book.png" alt="Informative Book" width="60" height="60" border="0" /></a></li>
+          <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_tapechart_new.html', '');" ><img src="/pmt_common/images/new/60/tape_chart.png" alt="Tapechart" width="60" height="60" border="0" /></a></li>
+					
+          <li><a href="javascript:YAHOO.frontdesk.UpdateContentCached('menu_configuration.html', 'dedicated=1');" ><img src="/pmt_common/images/new/60/configuration2.png" alt="Configuration" width="60" height="60" /></a></li>
+          <!--<li><a href="javascript:YAHOO.frontdesk.UpdateContentCached('ds_email_queue.html', '');" ><img src="/pmt_common/images/new/60/mail_new.png" alt="Email Queue Manager" width="60" height="60" /></a></li>-->
+          <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_knowledge_base.html', '');" ><img src="/pmt_common/images/new/60/knowledge_base.png" alt="Knowledge Base" width="60" height="60" border="0" /></a></li>
+          <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_tickets.html', '');" ><img src="/pmt_common/images/new/60/ticket.png" alt="Ticket System" width="60" height="60" border="0" /></a></li>
+                    <li><a href="javascript:SatisfactionChoose();" ><img src="/pmt_common/images/new/60/s_satisfied.png" alt="Satisfaction" width="60" height="60" border="0" /></a></li>
+                    <li id="ifbyphone_agent_icon" style="display: none;"></li>
+          <li id="ifbyphone_admin_icon" style="display: none;"></li>
+        </ul>
+      </div>
+    </div>
+		
+
+    <div id="page_title_bar">
+      <div id="page_title_bar_title">
+        Welcome DevTeam Test <span style="cursor:pointer;"
+  onclick="javascript:{ 
+  if (this.innerHTML == '[+]') {
+    $('#frontdesk_content > div > div > div').show(); 
+    $('#frontdesk_content > div > div > h2 > span').html('[-]'); 
+    $('#frontdesk_content > div > div > div > ul > div').show(); 
+    $('#frontdesk_content > div > div > div > ul > li > span').html('[-]'); 
+    this.innerHTML = '[-]';
+  } else {
+    $('#frontdesk_content > div > div > div').each(function(){ if ($(this).html() != '' ) { $(this).hide(); } }); 
+    $('#frontdesk_content > div > div > h2 > span').html('[+]'); 
+    $('#frontdesk_content > div > div > div > ul > div').hide(); 
+    $('#frontdesk_content > div > div > div > ul > li > span').html('[+]'); 
+    this.innerHTML = '[+]';
+  }
+  }" >[+]</span>
+            </div>
+      <div id="page_title_bar_logout">
+Hometripper | Logged in as devtest1    
+   | <a href="auth_login.html?logout=1">Log Out</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="content">
+  
+<div id='frontdesk_content' >
+
+<div class='path' id='path' style='display:none;' >
+  <span style="cursor:pointer;"
+  onclick="javascript:{ 
+  if (this.innerHTML == 'Main Menu [+]') {
+    $('#frontdesk_content > div > div > div').show(); 
+    $('#frontdesk_content > div > div > h2 > span').html('[-]'); 
+    $('#frontdesk_content > div > div > div > ul > div').show(); 
+    $('#frontdesk_content > div > div > div > ul > li > span').html('[-]'); 
+    this.innerHTML = 'Main Menu [-]';
+  } else {
+    $('#frontdesk_content > div > div > div').each(function(){ if ($(this).html() != '' ) { $(this).hide(); } }); 
+    $('#frontdesk_content > div > div > h2 > span').html('[+]'); 
+    $('#frontdesk_content > div > div > div > ul > div').hide(); 
+    $('#frontdesk_content > div > div > div > ul > li > span').html('[+]'); 
+    this.innerHTML = 'Main Menu [+]';
+  }
+  }" >Main Menu [+]</span>
+  </div>
+
+<div class="pageColumn">
+<div style="padding-bottom: 10px;"><a href="http://www.streamlinesummit.com/" target="_blank"><img src="/pmt_common/images/new/sammit2015.jpg" border="" width="100%" alt="" /></a></div>
+<div class="homepage_section_container">
+    <h2 onclick="ExpandCollapseTableComplex('reservations', 'reservations_div')" >Reservations <span id='reservations'>[-]</span></h2>
+    <div id="reservations_div" >
+    <ul>
+      <li class="subhead" onclick="ExpandCollapseTableComplex('booking', 'booking_div')" >Booking <span id='booking'>[-]</span></li>
+      <div id="booking_div" style="display:block;">
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_reservation_new.html', '');" >Quick Book&nbsp;&nbsp;&nbsp;[F2]</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_reservation_new_informative_book.html', '');" >Informative Book</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_tapechart_new.html', '');" >Tape Chart</a></li>
+                                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_reservation_transfer.html', '');" >Transfer Reservation</a></li>
+              </div>
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('lm', 'lm_div')" >Lead Management <span id='lm'>[+]</span></li>
+      <div id="lm_div" style="display:none;">
+      <li><a href="javascript:void(0);" onclick="javascript:AddNewLeadRes(this);" id="creat_new_lead_link">Create New Lead</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_leads_todo.html', '');" >TODO (0:0)</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'lead_status_id=1');">New (25)</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'lead_status_id=2');">Hot (0)</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'lead_status_id=3');">Work (0)</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'lead_status_id=8');">Hold (0)</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'lead_status_id=4');">Cold (0)</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'lead_status_id=6');">Dead (154)</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'lead_status_id=5');">Booked (15)</a></li>
+      </div>
+          
+          
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('qp', 'qp_div')" >Quick Purchase <span id='qp'>[+]</span></li>
+      <div id="qp_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_client_purchase_new.html', '');" >Quick Purchase</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_client_purchase_list.html', 'status_id=1');" >Quick Purchases List</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_client_purchases.html', '');" >Quick Purchases Report</a></li>
+      </div>
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('rrr', 'rrr_div')" >Reservations <span id='rrr'>[+]</span></li>
+      <div id="rrr_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_reservation_find.html', '');" >Find a Reservation&nbsp;&nbsp;&nbsp;[F4]</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'status_code=0,2,4&flag_id=7');" >Not Viewed (263)</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'status_code=0');" >Non Blocked (X0)</a></li>
+            <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'status_code=1');" >Blocked (X1)</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'status_code=0,2,4');" >Future (X0, X2, X4)</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'status_code=2,4');" >Booked (X2, X4)</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'status_code=5,6');" >Checked-in/In-House (X5, X6)</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'status_code=2,4,5,6');" >Booked/Modified/Checked-in/In-House (X2, X4, X5, X6)</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'status_code=8');" >Checked Out (X8)</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'status_code=9');" >Cancelled (X9)</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'status_code=10');" >No-Shows (X10)</a></li>
+      
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations_last.html', 'status_code=');" >My Last Reservations</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations_internal_sources.html', 'status_code=');" >Without an Internal Source Set</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'type_id=19');" >VRBO Reservations</a></li>
+             <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'type_id=66');" >LODGIX Reservations</a></li>
+                   </div>
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('sq', 'sq_div')" >Status Queues <span id='sq'>[+]</span></li>
+      <div id="sq_div" style="display:none;">
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=46');" >Attached Documents have been signed via AsignatureAway</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=451');" >Enable to modify Past Reservation</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=39');" >Disable emails</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=1');" >New Reservation</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=5');" >CC Problem - auto set by system to flag problem</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=2');" >Repeat Reservation</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=3');" >Pain Reservation</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=7');" >Not Viewed Reservation</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=8');" >Pricing Error</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=9');" >Disable CC Autocharge</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=10');" >Extra attention VIP</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=11');" >Early Check-in</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=12');" >Late Check-in</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=15');" >Late Check-out</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=18');" >MiddleTerm Reservation</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=17');" >LongTerm Reservation</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=19');" >TEMPORARY HOLD</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=20');" >Delivery</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=21');" >NO CONTRACT</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=42');" >VAC GRD PROB</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=43');" >RNTL GRD PROB</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=45');" >CSA PROB</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=226');" >Email Error</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=618');" >Completed Welcome Call with Guest</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations.html', 'flag_id=654');" >This is a Flip Key reservation</a></li>
+      </div>
+    </ul>
+    </div>
+    <div class="icon reservations"></div>
+  </div>
+  <div class="homepage_section_container">
+    <h2 onclick="ExpandCollapseTableComplex('guest', 'guest_div')" >Guest Management <span id='guest'>[-]</span></h2>
+    <div id="guest_div" >
+    <ul>
+      <li><a style='font-weight:bold;' href="javascript:YAHOO.frontdesk.UpdateContent('general_companies_documents_templates.html', '');">Manage Documents</a></li>
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('coupons', 'coupons_div')" >Coupons <span id='coupons'>[+]</span></li>
+      <div id="coupons_div" style="display:none;" >
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_companies_coupons.html', '');">Coupons Manager</a></li>
+              </div>
+      
+            
+      <li class="subhead" onclick="ExpandCollapseTableComplex('guestfeedback', 'guestfeedback_div')" >Guest Feedback (0) <span id='guestfeedback'>[+]</span></li>
+      <div id="guestfeedback_div" style="display:none;" >
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reviews.html', 'status_id=1');">Pending Guest Feedbacks (0)</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reviews.html', 'status_id=2');">Approved Guest Feedbacks</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reviews.html', 'status_id=3');">Declined Guest Feedbacks</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_review_new_step1.html', '');">Add Guest Feedback</a></li>
+              </div>
+      
+      
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('guestmanager', 'guestmanager_div')" >Guest Manager <span id='guestmanager'>[+]</span></li>
+      <div id="guestmanager_div" style="display:none;" >
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_guest_browser.html', '');">Guest Browser</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_guest_manager.html', '');">Create Report</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_market_analysis.html', '');">Market Analysis</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_guest_upload.html', '');">Guest Upload</a></li>
+                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_loyalty.html', '');">Loyalty Report</a></li>
+                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_view_all_guests.html', '');">View All Guests</a></li>
+      </div>
+      
+      
+    </ul>
+    </div>
+    <div class="icon guestManagement"></div>
+  </div>
+</div>
+
+<div class="pageColumn">
+<div class="homepage_section_container" style="min-height: 168px;">
+    <h2 onclick="ExpandCollapseTableComplex('news', 'news_div')" >Latest News <span id='news'>[-]</span></h2>
+    <div id="news_div" >
+    <ul>
+        <li><a href='javascript:;' onclick="javascript:YAHOO.frontdesk.UpdateContent('general_system_bulletins_read.html', 'id=142');" style='color: #cc0000 !important;'><b>08/31/15</b> SiteCore and Shield - Important Information</a></li>
+<li><a href='javascript:;' onclick="javascript:YAHOO.frontdesk.UpdateContent('general_system_bulletins_read.html', 'id=141');" style='color: #cc0000 !important;'><b>08/23/15</b> Streamline Web Technology Webinar</a></li>
+<li><a href='javascript:;' onclick="javascript:YAHOO.frontdesk.UpdateContent('general_system_bulletins_read.html', 'id=139');" style='color: #cc0000 !important;'><b>08/14/15</b> Streamline New Knowledge Base</a></li>
+        <li class="subhead" onclick="javascript:YAHOO.frontdesk.UpdateContent('general_system_bulletins.html', '');">Read all news</li>
+    </ul>
+    </div>
+    <div class="icon news"></div>
+</div>
+  <span class="red_container">
+      <div class="homepage_section_container">
+        <h2 onclick="ExpandCollapseTableComplex('thrid_party', 'thrid_party_div')">Third Party Integrations <span id='thrid_party'>[-]</span></h2>
+        <div id="thrid_party_div" >
+        <ul>
+    			<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_distribution_channel.html', '');" >Booking Pal</a></li>
+    			<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_yield_management_register.html', '');" >My Rate Manager</a></li>
+    			<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_behome247_register.html', '');" >BeHome 24/7</a></li>
+    			<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_leisure_link.html', '');" >LeisureLink</a></li>
+			    <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_tourico.html', '');" >Tourico</a></li>
+			    <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_vacastayconnect.html', '');" >VacaStayConnect</a></li>
+			            </ul>
+        </div>
+        <div class="icon thrid_party"></div>
+      </div>
+  </span>  
+  <div class="homepage_section_container">
+    <h2 onclick="ExpandCollapseTableComplex('housekeeping', 'housekeeping_div')" >Housekeeping <span id='housekeeping'>[-]</span></h2>
+    <div id="housekeeping_div" >
+    <ul>
+            <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_housekeeping_cleaning.html', '');" >Housekeeper Cleaning Report</a></li>
+            			      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_arrivals_by_date.html', '');" >Arrivals by Date</a></li>
+						      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_departures_by_date.html', '');" >Departures by Date</a></li>  
+															
+      <li class="subhead" onclick="ExpandCollapseTableComplex('hkreports', 'hkreports_div')" >Housekeeping Reports <span id='hkreports'>[+]</span></li>
+      <div id="hkreports_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_housekeeping_new_total.html', '');" >Housekeeping Analysis</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_housekeeping_custom.html', '');" >Status Activity Tracker</a></li>
+      </div>
+    </ul>
+    </div>
+    <div class="icon housekeeping"></div>
+  </div>
+<div class="homepage_section_container">
+    <h2 onclick="ExpandCollapseTableComplex('maintenance', 'maintenance_div')" >Maintenance <span id='maintenance'>[-]</span></h2>
+    <div id="maintenance_div" >
+    <ul>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_maintenances_priority.html', '');">Work Order Priority</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_maintenances_parent_tasks.html', '');">Work Order Manager</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_maintenance_new.html', '');">Add New Work Order</a></li>
+      <!--  li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_maintenance_new_simple.html', '');">Add New Work Order (Quick)</a></li -->
+      
+  <li class="subhead" onclick="ExpandCollapseTableComplex('maintenancesearch', 'maintenancesearch_div')" >Search <span id='maintenancesearch'>[+]</span></li>
+  <div id="maintenancesearch_div" style="display:none;">
+    <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_maintenances.html', 'show_all_work_orders=1');">View All Work Orders</a></li>
+    <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_maintenances.html', 'blank_search=1');">Work Order Search</a></li>
+    <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_maintenances_charges.html', 'blank_search=1');">Search Individual Invoices</a></li>
+  </div>
+  
+  <li class="subhead" onclick="ExpandCollapseTableComplex('maintenancestatus', 'maintenancestatus_div')" >Work Order Queues <span id='maintenancestatus'>[+]</span></li>
+  <div id="maintenancestatus_div" style="display:none;">
+    <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_maintenances.html', 'status_id=4');">Pending Work Orders (<span style="color:#BA0000;font-weight:bold;">1</span>/2)</a></li>
+            <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_maintenances.html', 'status_id=1');">Active Work Orders (<span style="color:#BA0000;font-weight:bold;">2</span>/2)</a></li>
+    <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_maintenances.html', 'status_id=6');">Pending Final Closing Work Orders (2)</a></li>
+    <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_maintenances.html', 'status_id=2');">Closed Work Orders</a></li>
+    <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_maintenances.html', 'status_id=3');">Deleted Work Orders</a></li>
+  </div>
+    <li class="subhead" onclick="ExpandCollapseTableComplex('maintenance_reports', 'maintenance_reports_div')" >Reports <span id='maintenance_reports'>[+]</span></li>
+  <div id="maintenance_reports_div" style="display:none;">
+		  			<li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_maintenance_work_order.html', '');">Work Order Report</a></li>
+						      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_vendor_check_register.html', '');">Vendor Check Register</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_vendor_reporting.html', '');">Vendor Historical Breakdown</a></li>
+              </div>
+		  <li class="subhead" onclick="ExpandCollapseTableComplex('maintenanceinvoices', 'maintenanceinvoices_div')" >Invoices <span id='maintenanceinvoices'>[+]</span></li>
+  <div id="maintenanceinvoices_div" style="display:none;">
+    <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_maintenance_invoices.html', 'status_id=2');">Processed Invoices</a></li>
+  </div>
+
+    </ul>	
+    </div>
+    <div class="icon maintenance"></div>
+  </div>
+</div>
+
+<div class="pageColumn">
+<div class="homepage_section_container" style="min-height: 168px;">
+    <h2 onclick="ExpandCollapseTableComplex('blogs', 'blogs_div')" >Latest Blogs <span id='blogs'>[-]</span></h2>
+    <div id="blogs_div" >
+    <ul>
+        <li><a href='javascript:;' onclick="javascript:YAHOO.frontdesk.UpdateContent('general_blog.html', 'blog_id=2871');"><b>09/11/15</b> 3 Tips for Increasing Email Deliverability</a></li>
+<li><a href='javascript:;' onclick="javascript:YAHOO.frontdesk.UpdateContent('general_blog.html', 'blog_id=2841');"><b>09/04/15</b> SUMMIT TIME</a></li>
+<li><a href='javascript:;' onclick="javascript:YAHOO.frontdesk.UpdateContent('general_blog.html', 'blog_id=2751');"><b>08/27/15</b> Reservation Cancellation Process</a></li>
+        <li class="subhead" onclick="javascript:YAHOO.frontdesk.UpdateContent('general_blog.html', '');">Read all</li>
+    </ul>
+    </div>
+    <div class="icon blogs"></div>
+</div>
+  <div class="homepage_section_container">
+    <h2 onclick="ExpandCollapseTableComplex('Accounting', 'Accounting_div')" >Accounting <span id='Accounting'>[-]</span></h2>
+    <div id="Accounting_div" >
+    <ul>
+    
+              
+      <li class="subhead" onclick="ExpandCollapseTableComplex('na', 'na_div')" >Nightly Audit <span id='na'>[+]</span></li>
+      <div id="na_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_nightly_audit_overall.html', 'status_id=1');">Nightly Audit Overall</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_nightly_audit.html', 'status_id=1');">Nightly Audit</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_nightly_receipts.html', '');">Nightly Receipts</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_reservations.html', '');">Nightly Reservation Report</a></li>
+      </div>
+      
+            <li class="subhead" onclick="ExpandCollapseTableComplex('deposits', 'deposits_div')" >Deposits/Transactions <span id='deposits'>[+]</span></li>
+      <div id="deposits_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_companies_ledgers.html', '');">Ledger Accounts Manager</a></li>
+            <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_undeposited_funds_register.html', 'status_id=1&generate_report=1');">Undeposited Funds Register</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_deposit_list.html', 'generate_report=1&start=1');">Deposit List</a></li>
+            <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_ledger_adjustment.html', '');">Ledger Adjustment</a></li>
+            </div>
+            
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('ot', 'ot_div')" >Owners Transactions <span id='ot'>[+]</span></li>
+      <div id="ot_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_owner_charge_step1.html', '');">Post an Owner Charge</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_owner_receive_step1.html', '');">Receive an Owner Payment</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_owner_credit_step1.html', '');">Credit an Owner Account</a></li>
+ 
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_owner_payment_step1.html', '');">Pay Owner</a></li>
+      
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_multiple_owner_charges_step1.html', '');">Post Multiple Owner Charges</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_import_owner_charges_step1.html', '');">Import Multiple Owner Charges</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charges_list.html', 'status_id=1');">Pending Invoices</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charges_list.html', 'status_id=2');">Processed Invoices</a></li>
+
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_recurring_owner_charges_step1.html', '');">Post Recurring Owner Charges</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_recurring_owner_charges_list.html', 'status_id=1');">Saved Recurring Entries</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_recurring_owner_charges_list.html', 'status_id=2');">Active/Modified Recurring Entries</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_recurring_owner_charges_list.html', 'status_id=3');">Paused Recurring Entries</a></li>
+
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charges_list.html', 'status_id=1&recurring=1');">Recurring Pending Invoices</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charges_list.html', 'status_id=2&recurring=1');">Recurring Processed Invoices</a></li>
+      
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charges_transaction.html', '');">Owner Charges By Transaction Code</a></li>
+      </div>
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('owner_statements', 'owner_statements_div')" >Owners Statements <span id='owner_statements'>[+]</span></li>
+      <div id="owner_statements_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_month_end_statements.html', 'hide_empty_reports=1&group_homes=1');">Month End Statements</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owners_statements_list.html' ,'status_id=1&empty_records=true');">Pending Approval</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owners_statements_list.html' ,'status_id=2&empty_records=true');">Confirmed</a></li>
+			 
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owners_statements_draft.html' ,'');">Draft Statement</a></li>
+			      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charge_breakdown.html' ,'');">Owner Charge Breakdown</a></li>
+      
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_payments.html', '');">Owner Payments Report</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_reserve_report.html', '');">Owner Reserve Balance & Transactions</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_balance_report.html', '');">Owner Balance & Transactions</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_future_reservations_balances.html', '');">Reservation Balances</a></li>
+                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_check_register.html', '');">Owner Check Register</a></li>
+      </div>
+
+      
+
+      <li class="subhead" onclick="ExpandCollapseTableComplex('pdwta_statements', 'pdwta_statements_div')" >PDWTA Statements <span id='pdwta_statements'>[+]</span></li>
+      <div id="pdwta_statements_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_travelagents_statements_manager.html' ,'show_generate=1&status_id=0&role_id=12');">Statements Manager</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_travelagents_statements_manager.html' ,'status_id=1&role_id=12');">Pending Approval</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_travelagents_statements_manager.html' ,'status_id=2&role_id=12');">Confirmed</a></li>
+      </div>
+
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('wholesale_statements', 'wholesale_statements_div')" >Wholesale Payments <span id='wholesale_statements'>[+]</span></li>
+      <div id="wholesale_statements_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_wholesale_payments_manager.html' ,'status_id=1');">Generate Report/Receive Money</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_wholesale_payments_manager.html' ,'status_id=2');">Confirmed Payments</a></li>
+      </div>
+
+      <li class="subhead" onclick="ExpandCollapseTableComplex('vendors_statements', 'vendors_statements_div')" >Vendors <span id='vendors_statements'>[+]</span></li>
+      <div id="vendors_statements_div" style="display:none;">
+						      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_vendor_pay_invoices.html', '');">Pay Invoices</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_vendor_invoice.html', '');">Post Vendor Invoice</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_vendor_view_payments.html', '');">View Payments</a></li>
+						<li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_vendor_check_register.html', '');">Vendor Check Register</a></li>
+                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_vendor_reporting.html', '');">Vendor Historical Breakdown</a></li>
+              </div>
+
+			      <li class="subhead" onclick="ExpandCollapseTableComplex('reconciliation_Reports', 'reconciliation_Reports_div')" >Bank Register & Reconc <span id='reconciliation_Reports'>[+]</span></li>
+      <div id="reconciliation_Reports_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_reconciliation_bank_register.html', '');">View Bank Register</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_reconciliation_statement_view.html', 'statement_id=0');">Begin Reconciliation Process</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_reconciliation_manager.html', 'status_id=1');">View Saved Statements</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_reconciliation_manager.html', 'status_id=2');">View Reconciled Statements</a></li>
+      </div>
+			
+      <li class="subhead" onclick="ExpandCollapseTableComplex('1099_Reports', '1099_Reports_div')" >1099 Reports <span id='1099_Reports'>[+]</span></li>
+      <div id="1099_Reports_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_1099_creation.html' ,'');">1099 Report Creation/Payer Info</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_1099_manager.html' ,'');">View Generated Reports</a></li>
+      </div>
+
+      <li class="subhead" onclick="ExpandCollapseTableComplex('acc_reports', 'acc_reports_div')" >Accounting Reports <span id='acc_reports'>[+]</span></li>
+      <div id="acc_reports_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_reservation_summary.html', '');">Monthly Reservation Summary</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_ledger_accounting.html', '');">Ledger Report By Transaction</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_ledger_accounting_summary.html', '');">Ledger Summary Report</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_ledger_accounting_tracker.html', '');">Ledger Accounting Tracker</a></li>
+			      </div>
+
+      
+    </ul>
+    </div>
+    <div class="icon accounting"></div>
+  </div>
+<div class="homepage_section_container">
+    <h2 onclick="ExpandCollapseTableComplex('owner', 'owner_div')" >Owner Tools <span id='owner'>[-]</span></h2>
+    <div id="owner_div" >
+    <ul>
+      
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_photo_screening.html', 'status_id=1');">Photo Screening (417)</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_description_screening.html', 'status_id=1');">Description Screening (0)</a></li>
+     
+      <li class="subhead" onclick="ExpandCollapseTableComplex('ownerservice', 'ownerservice_div')" >Owner Services (0/<span style="color:#BA0000;font-weight:bold;"></span>) <span id='ownerservice'>[+]</span></li>
+      <div id="ownerservice_div" style="display:none;">
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_ownerservice.html', 'status_id=1');">Active Requests (0/<span style="color:#BA0000;font-weight:bold;"></span>)</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_ownerservice.html', 'status_id=2');">Closed Requests</a></li>
+      </div>
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('toolbox_ot', 'toolbox_ot_div')" >Owners Transactions <span id='toolbox_ot'>[+]</span></li>
+      <div id="toolbox_ot_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_owner_charge_step1.html', '');">Post an Owner Charge</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_owner_receive_step1.html', '');">Receive an Owner Payment</a> <span style='color:#FF0000;' onmouseover="return overlib('Receives Cash From an Owner and Posts this to his account', 0, CAPTION, 'Receive an Owner Payment');" onmouseout="return nd();">[?]</span></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_owner_credit_step1.html', '');">Credit an Owner Account</a> <span style='color:#FF0000;' onmouseover="return overlib('Credits the Due To/From Owner Ledger 2300.  This basically pushes this amount into their owner statements.  There is no cash interaction that takes place', 0, CAPTION, 'Credit an Owner Account');" onmouseout="return nd();">[?]</span></li>
+ 
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_owner_payment_step1.html', '');">Pay Owner</a> <span style='color:#FF0000;' onmouseover="return overlib('This allows you to write a physical check to pay an owner.  This directly impacts your cash register.', 0, CAPTION, 'Pay Owner');" onmouseout="return nd();">[?]</span></li>
+      
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_multiple_owner_charges_step1.html', '');">Post Multiple Owner Charges</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_import_owner_charges_step1.html', '');">Import Multiple Owner Charges</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charges_list.html', 'status_id=1');">Pending Invoices</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charges_list.html', 'status_id=2');">Processed Invoices</a></li>
+
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_post_recurring_owner_charges_step1.html', '');">Post Recurring Owner Charges</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_recurring_owner_charges_list.html', 'status_id=1');">Saved Recurring Entries</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_recurring_owner_charges_list.html', 'status_id=2');">Active/Modified Recurring Entries</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_recurring_owner_charges_list.html', 'status_id=3');">Paused Recurring Entries</a></li>
+
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charges_list.html', 'status_id=1&recurring=1');">Recurring Pending Invoices</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charges_list.html', 'status_id=2&recurring=1');">Recurring Processed Invoices</a></li>
+      
+      </div>
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('toolbox_owner_statements', 'toolbox_owner_statements_div')" >Owners Statements <span id='toolbox_owner_statements'>[+]</span></li>
+      <div id="toolbox_owner_statements_div" style="display:none;">
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_month_end_statements.html', 'hide_empty_reports=1');">Month End Statements</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owners_statements_list.html' ,'status_id=1&empty_records=true');">Pending Approval</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owners_statements_list.html' ,'status_id=2&empty_records=true');">Confirmed</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owners_statements_draft.html' ,'');">Draft Statement</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charge_breakdown.html' ,'');">Owner Charge Breakdown</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_charges_transaction.html', '');">Owner Charges By Transaction Code</a></li>
+      </div>
+      
+    </ul>
+    </div>
+    <div class="icon ownerManagement"></div>
+  </div>
+</div>
+
+<div class="pageColumn">
+<div class="homepage_section_container" style="min-height: 168px;">
+    <h2 onclick="ExpandCollapseTableComplex('webinars', 'webinars_div')" >Latest Webinars <span id='webinars'>[-]</span></h2>
+    <div id="webinars_div" >
+    <ul>
+        <li><a href='javascript:;' onclick="javascript:YAHOO.frontdesk.UpdateContent('general_webinars_bulletins_read.html', 'id=145');" style='color: #cc0000 !important;'><b>09/22/15</b> Important - Streamline SiteCore/Shield Webinar (9/23)</a></li>
+<li><a href='javascript:;' onclick="javascript:YAHOO.frontdesk.UpdateContent('general_webinars_bulletins_read.html', 'id=144');" style='color: #cc0000 !important;'><b>09/14/15</b> Leisure Link & Streamline Shield</a></li>
+<li><a href='javascript:;' onclick="javascript:YAHOO.frontdesk.UpdateContent('general_webinars_bulletins_read.html', 'id=143');" style='color: #cc0000 !important;'><b>09/10/15</b> Important Upcoming Webinars</a></li>
+        <li class="subhead" onclick="javascript:YAHOO.frontdesk.UpdateContent('general_webinars_bulletins.html', '');">View all recent webinars</li>
+    </ul>
+    </div>
+    <div class="icon webinars"></div>
+</div>
+  <div class="homepage_section_container">
+    <h2 onclick="ExpandCollapseTableComplex('reports', 'reports_div')" >Reports <span id='reports'>[-]</span></h2>
+    <div id="reports_div" >
+    <ul>
+
+      <li class="subhead" onclick="ExpandCollapseTableComplex('reports_basic', 'reports_basic_div')" >Basic <span id='reports_basic'>[-]</span></li>
+      <div id="reports_basic_div" style="display:block;" >
+        <li><a style="font-weight:bold;" href="javascript:YAHOO.frontdesk.UpdateContent('reports_overview.html', '');">Reports Overview</a></li>
+                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_check_in.html', '');">Check-In Report</a></li>
+				        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_check_in_range.html', '');">Check-In Range Report</a></li>
+				        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_in_house.html', '');">In-House Report</a></li>
+				        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_check_out.html', '');">Check-Out Report</a></li>
+				        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_check_out_range.html', '');">Check-Out Range Report</a></li>
+				                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_check_out_with_balances.html', '');">Checked Out Reservations With Balances</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_homes_pricing_new.html', '');">Homes Pricing</a></li>
+                                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_check_register.html', '');">Owner Check Register</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_vendor_check_register.html', '');">Vendor Check Register</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_all_check_register.html', '');">All Check Register</a></li>
+              </div>
+      
+            <li class="subhead" onclick="ExpandCollapseTableComplex('reports_financial', 'reports_financial_div')" >Financial <span id='reports_financial'>[+]</span></li>
+      <div id="reports_financial_div" style="display:none;" >
+                												
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_balance_due.html', '');">Balance Due Report</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_balance_due_past.html', '');">Past Balance Due Report</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_payments.html', '');">Owner Payments Report</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_reserve_report.html', '');">Owner Reserve Balance & Transactions</a></li>
+                                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owner_balance_report.html', '');">Owner Balance & Transactions</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_future_reservations_balances.html', '');">Reservation Balances</a></li>
+                                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_booking_revenue_summary.html', '');">Booking/Revenue Summary</a></li>
+        <!-- li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_booking_summary.html', '');">Booking Summary</a></li -->
+      </div>
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('reports_analysis', 'reports_analysis_div')" >Analysis <span id='reports_analysis'>[+]</span></li>
+      <div id="reports_analysis_div" style="display:none;" >
+                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_customized_new.html', '');">Reservation Analysis</a></li>
+                                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_profit_reporting.html', '');">Profit Reporting</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_profit_analysis.html', '');">Profit Analysis</a></li>
+                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_lead_analysis_new.html', '');">VRBO Lead Analysis</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_lead_heard_about.html', '');">Heard About/Lead Source</a></li>
+                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_revenue_forecast.html', '');">Revenue Forecast Report</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_revenue_forecast_daily.html', '');">Revenue Forecast Daily Report</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_occupancy_percentage_new.html', '');">Occupancy Percentage</a></li>
+                
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_employee_revenue_breakdown.html', '');">Employee Revenue Breakdown Report</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_employee_res_creation_date_breakdown.html', '');">Employee Res Creation Date Breakdown Report</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_heard_about_us_annual_analysis.html', '');">Heard About Us Annual Analysis Report</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_market_analysis_comparisons.html', '');">Market Analysis Comparisons Report</a></li>
+
+                                                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_units_revenue_comparison.html', '');">Property Revenue Comparison Report</a></li>
+                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_revenue_comparison.html', '');">Revenue Comparison Report</a></li>
+                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_pacing.html', '');">Revenue Pacing Report</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_pacing_sales.html', '');">Sales Pacing Report</a></li>
+              </div>
+      
+      <li class="subhead" onclick="ExpandCollapseTableComplex('reports_advanced', 'reports_advanced_div')" >Advanced <span id='reports_financial'>[+]</span></li>
+      <div id="reports_advanced_div" style="display:none;" >
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_arrivals_stayover.html', '');">Arrivals & StayOver</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_vacant_and_dirty_room.html', '');">Vacant & Dirty Room</a></li>
+                                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_homeowner.html', '');">Home Owner Report</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_homeowner_addresses.html', '');">Property Address List</a></li>
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_owners_statement_address.html', '');">Owners Statement Address</a></li>
+                                                                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_flags.html', '');">Reservation Flags Report</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_marketing.html', '');">VRBO/Homeaway/Flipkey IDs</a></li>
+                                
+                                                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_rent_roll_report.html', '');">Rent Roll Report</a></li>
+                                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_without_contracts.html', '');">Reservations without Contracts</a></li>
+                                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('reports_vendor_reporting.html', '');">Vendor Historical Breakdown</a></li>
+                          </div>
+			
+      
+    </ul>
+    </div>
+    <div class="icon reports"></div>
+  </div><div class="homepage_section_container">
+    <h2 onclick="ExpandCollapseTableComplex('tools', 'tools_div')" >Toolbox <span id='tools'>[-]</span></h2>
+    <div id="tools_div" >
+    <ul>
+            <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_news_articles.html', 'status_id=1');">Hometripper News Manager</a></li>
+      <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_email_queue.html', '');">Email Queue Manager</a></li>
+              <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_reservations_deleted.html', '');">Deleted Bucket</a></li>
+                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_system_bulletins.html', '');">Streamline Bulletin Board</a></li>
+      
+            
+             
+        <li><a href="javascript:openPopup('training_setup_ingrid.html', 1100, 600);">Interactive Training Guide</a></li>
+              
+        <!-- Commented out for now via request for clients to not be able to see it.
+      <li class="subhead" onclick="ExpandCollapseTableComplex('links_to_pdfs', 'links_to_pdfs_div')" >Training Documentation <span id='helpitems'>[+]</span></li>
+      <div id="links_to_pdfs_div" style="display:none;">
+        <li><a href="http://www.streamlinevrs.com/training/T1 - Users - Seasons - Ticketing System.pdf" target="_blank">Users, Seasons, Ticket System</a></li>
+        <li><a href="http://www.streamlinevrs.com/training/T2 - Units - Amenities - Room Details.pdf" target="_blank">Units, Amenities, Room Details</a></li>
+        <li><a href="http://www.streamlinevrs.com/training/T3 - Reservations - Discounts - Coupons.pdf" target="_blank">Reservations, Discounts, Coupons</a></li>
+        <li><a href="http://www.streamlinevrs.com/training/T4 - Documents.pdf" target="_blank">Document System, Using Triggers, Automated Emails</a></li>
+        <li><a href="http://www.streamlinevrs.com/training/T5 - Accounting.pdf" target="_blank">Accounting Overview</a></li>
+        <li><a href="http://www.streamlinevrs.com/training/T6a - Housekeeping, Maintenance, Owner Area.pdf" target="_blank">Housekeeping, Maintenance, Owner Modules</a></li>
+        <li><a href="http://www.streamlinevrs.com/training/T6b - Travel Agents.pdf" target="_blank">Travel Agents</a></li>
+        <li><a href="http://www.streamlinevrs.com/training/T7 - Lead Management.pdf" target="_blank">Lead Management System</a></li>
+      </div>
+      <!-- Commented out for now via request for clients to not be able to see it.
+      <li class="subhead" onclick="ExpandCollapseTableComplex('videos', 'videos_div')" >Training Videos <span id='helpitems'>[+]</span></li>
+      <div id="videos_div" style="display:none;">
+        <li>Users, Seasons, Ticket System (Full Training Video, Give It Time To Load)</li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/gqVSVITU" target="_blank">Users, Seasons, Amenities</a></li>
+        <li>Units, Amenities, Room Details (Full Training Video, Give It Time To Load)</li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/1VonIDR1O" target="_blank">Units</a></li>
+        <li style="padding-left: 30px;"><a href="http://screencast.com/t/EpQpk87d" target="_blank">Asset Management</a></li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/aiyisAb8f" target="_blank">Homes Pricing Process</a></li>
+        <li>Reservations, Discounts, Coupons  (Full Training Video, Give It Time To Load)</li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/2cozOo1b4KO" target="_blank">Reservations</a></li>
+        <li style="padding-left: 30px;"><a href="http://screencast.com/t/DmXJeEfWfNHD" target="_blank">Detailed Look At Coupon System</a></li>
+        <li style="padding-left: 30px;"><a href="http://screencast.com/t/cPEqnsUvk4" target="_blank">Using Flags With Reservations</a></li>
+        <li>Document System, Using Triggers, Automated Emails (Full Training Video, Give It Time To Load)</li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/l5ERetw4" target="_blank">Documents</a></li>
+        <li>Accounting Overview (Full Training Video, Give It Time To Load)</li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/9fAR4ETl2jZY" target="_blank">Paying Vendors</a></li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/SBYYwGYuShpO" target="_blank">Nightly Audits, Check-ins, Check-outs (Related to Owner Statements)</a></li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/pewLo2ql" target="_blank">Preparing Month End Owner Statements</a></li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/SvnxACGhvBJu" target="_blank">Preparing The System To Pay Housekeepers</a></li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/xak2X5maqe" target="_blank">Setting Up Reserve Accounts</a></li>
+        <li>Housekeeping, Maintenance, Owner Modules  (Full Training Video, Give It Time To Load)</li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/Es73PvuIVy" target="_blank">Owner Area, Maintenance, Housekeeping</a></li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/NNywDVpqohX9" target="_blank">Housekeeping Inspections</a></li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/LXnJwmn9PjI" target="_blank">Maintenance Inspections</a></li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/F4QFV1ji" target="_blank">What Are Maintenance Operators?</a></li>
+        <li>Travel Agents (Full Training Video, Give It Time To Load)</li>
+        <li style="padding-left: 30px;"><a href="http://screencast.com/t/H8pbqohlpbO1" target="_blank">Travel Agent Types</a></li>
+        <li>Marketing Features</li>
+        <li style="padding-left: 30px;"><a href="http://www.screencast.com/t/aIoroEUI" target="_blank">Lead Management System</a></li>
+        <li style="padding-left: 30px;"><a href="http://screencast.com/t/urG6ryLaP" target="_blank">Bulkmail System</a></li>
+      </div>
+      -->
+            
+            
+      <li class="subhead" onclick="ExpandCollapseTableComplex('helpitems', 'helpitems_div')" >Help <span id='helpitems'>[+]</span></li>
+      <div id="helpitems_div" style="display:none;">
+        <!--  li><a href="javascript: ShowAdminUserGuideWindow('/pmt_common/admin_userguide/index.htm');">User Guide</a></li -->
+        <li><a href="javascript:openPopup('training_setup_ingrid.html', 1100, 600);">Interactive Training Guide</a></li>
+                <li><a href="javascript:YAHOO.frontdesk.UpdateContent('ds_tickets.html', '');">Ticketing System</a></li>
+                <!--  li><a href="http://www.mypropertymanagementsoftware.com/setup-videos.html" target="_blank">Video Library</a></li -->
+                                        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_knowledge_base.html', '');">Knowledge Base</a></li>
+      </div>
+      
+						
+			<li class="subhead" onclick="ExpandCollapseTableComplex('streamline_news', 'streamline_news_div')" >Streamline News <span id='streamline_news'>[+]</span></li>
+      <div id="streamline_news_div" style="display:none;">
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_system_bulletins.html', '');">Streamline Bulletin Board (69/69)</a></li>
+      </div>
+      
+      
+			
+    </ul>
+    </div>
+    <div class="icon toolbox"></div>
+  </div>
+<div class="homepage_section_container">
+    <h2 onclick="ExpandCollapseTableComplex('configuration', 'configuration_div')" >Configuration <span id='configuration'>[-]</span></h2>
+    <div id="configuration_div" >
+    <ul>
+
+            <li class="subhead" onclick="ExpandCollapseTableComplex('propertydef', 'propertydef_div')" >Property Definitions <span id='propertydef'>[+]</span></li>
+      <div id="propertydef_div" style="display:none;">
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_homes.html', 'lodging_type_id=3&status_id=2');" >Vacation Rentals (169)</a></li>
+      </div>
+            
+            <li class="subhead" onclick="ExpandCollapseTableComplex('users', 'users_div')" >Users/Owners <span id='users'>[+]</span></li>
+      <div id="users_div" style="display:none;">
+        <li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_processors.html', 'role_id=3&status_id=2');" >Owners (51)</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_processors.html', 'role_id=4&status_id=2');" >Vendors (32)</a></li>
+<li><a href="javascript:YAHOO.frontdesk.UpdateContent('general_processors.html', 'role_id=11&status_id=2');" >Wholesale Travel Agents (1)</a></li>
+      </div>
+      
+            
+            
+      
+    </ul>
+    </div>
+    <div class="icon configuration"></div>
+  </div>
+</div>
+    </div>
+    <div id="pmt_new" class="clear" style="height:0px;"></div>
+  </div>
+</div>
+</span></div>
+    
+<div id='service_id'></div>
+<div id='service_id2'></div>
+<div id='dav_service_id'></div>
+<div id='remote_cckey' style='display:none;'></div>
+<div id='dlg'></div>
+<div style="display:none">
+  <form method="post" action="javascript:YAHOO.frontdesk.UpdateContent(YAHOO.frontdesk.url, YAHOO.frontdesk.params);" id='reloadform'><input type='hidden' name='CSRFName' value='CSRFGuard_1233161849' /><input type='hidden' name='CSRFToken' value='755f2723af1728f03ba7437f046d20bec770f973f68166383a43887bdc03a887f61a755fbd276dbcb614fc49d9c9e7a92554d31055a9c270af221db9d6aae5f6' /></form>
+  <form method="post" action="" id='changecompanyform' ><input type='hidden' name='CSRFName' value='CSRFGuard_1949079521' /><input type='hidden' name='CSRFToken' value='7f4a001010265d1d603897e46254dd9a7f19e975f13fd99120b461daf3e028197ec63bcbe82fab0d4e85fb7c800e3b7c34fb3db5f11936946717ee8f76430eb4' />
+    <input type='hidden' name="new_company_id" id="new_company_id" value="0" />
+    <input type='hidden' name="new_url" id="new_url" value="" />
+    <input type='hidden' name="target_url" id="target_url" value="" />
+    <input type='hidden' name="new_params" id="new_params" value="" />
+  </form>
+</div>
+
+
+
+</body>
+</html>

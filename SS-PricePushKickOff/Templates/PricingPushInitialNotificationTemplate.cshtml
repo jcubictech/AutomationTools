@@ -1,0 +1,18 @@
+﻿@using System
+@model dynamic
+
+Pricing push process to the following Vacation Rental Management Systems has started At (UTC): @Model.ProcessStartedAt
+
+@if (Model.PushToAirbnb)
+{
+    <text> - AirBnb </text>
+}
+@if (Model.PushToStreamline)
+{
+    <text> - Streamline </text>
+}
+
+
+
+
+
